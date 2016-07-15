@@ -1,1 +1,1 @@
-web: java -jar target/*.war --spring.profiles.active=prod,heroku --server.port=$PORT --spring.datasource.heroku-url=$DATABASE_URL --metrics.jmx.enabled=false --spring.datasource.jmx-enabled=false --spring.jmx.enabled=false --management.security.enabled=false --endpoints.jmx.enabled=false
+web: java -jar target/*.war --spring.profiles.active=dev,heroku --server.port=$PORT --spring.datasource.heroku-url=$DATABASE_URL --metrics.jmx.enabled=false --spring.datasource.jmx-enabled=false --spring.jmx.enabled=false --management.security.enabled=false --endpoints.jmx.enabled=false
