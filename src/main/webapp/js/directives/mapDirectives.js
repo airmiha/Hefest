@@ -57,10 +57,11 @@ hefest.directive('olMap', ['$window', function ($window) {
         	scope.internalMapControl = scope.mapControl || {};
         	var map = new OpenLayers.Map(attrs.id, {
 				projection : 'EPSG:3857',
-				layers : [  new OpenLayers.Layer.Google("Google Streets", // the default
+					 
+				layers : [new OpenLayers.Layer.Google("Google Streets", // the default
 				{
 					numZoomLevels : 20
-				}), new OpenLayers.Layer.Google("Google Physical", {
+				}),  new OpenLayers.Layer.Google("Google Physical", {
 					type : google.maps.MapTypeId.TERRAIN
 				}), new OpenLayers.Layer.Google("Google Hybrid", {
 					type : google.maps.MapTypeId.HYBRID,
