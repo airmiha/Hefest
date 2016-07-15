@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3 translate>servicerequest.headline</h3>
+	<div class="alert alert-success" ng-show="success" scroll-bookmark>
+        <i class="glyphicon glyphicon-saved"></i><strong translate>servicerequest.messages.success</strong>
+     </div>
+     <div class="alert alert-danger" ng-show="error">
+        <i class="glyphicon glyphicon-warning-sign"></i> <strong translate>global.messages.error.processing</strong> <span>global.messages.error.checkinput</span>
+    </div>
+	<form name="newServiceRequestForm" ng-submit="postServiceRequest(newServiceRequestForm.$valid)" novalidate>
+        <h4 translate>servicerequest.selectservice</h4>
+        <p class="paragraph" translate>servicerequest.addservices</p>
+        <div class="form-group">
+			<label translate>servicerequest.chooseprofession</label>
+			<select class="form-control" ng-model="service.profession" ng-options="profession.name for profession in professions" ng-change="selectProfession()"></select>	          	     
+		</div> 
+		<div class="form-group">
+			<label translate>servicerequest.chooseservice</label>
+			<div class="form-inline">
+				<select class="form-control" ng-model="service.serviceCategory" ng-options="servicecategory.name for servicecategory in serviceCategories" style="width:250px"></select>	  
+				<button class="btn btn-primary" ng-click="add(service.serviceCategory)"><span class="glyphicon glyphicon-plus"></span>{{'servicerequest.add' | translate }}</button>        	     
+			</div>
+		</div>
+		<div class="form-group">
+			<label translate>servicerequest.selectedservices</label>
+			<ul class="list-group" style="margin-bottom:10px">
+				<li class="list-group-item" ng-repeat="selectedService in selectedServices">
+					<button class="btn btn-default" ng-click="remove(selectedService)"><span class="glyphicon glyphicon-trash"></span></button>
+					<span>{{selectedService.name}}</span>
+				</li>
+			</ul>
+		</div>
+        <div class="form-group">
+			<label translate>servicerequest.locality</label>
+			<div class="inner-addon left-addon">
+				<i class="glyphicon glyphicon-map-marker"></i>
+	  			<input name="locality" type="text" ng-model="request.locality" placeholder="{{'servicerequest.locality.placeholder' | translate}}"
+						typeahead="locality as locality.name for localities in getLocalities($viewValue) | filter:{name: $viewValue}" typeahead-loading="Trazim..."
+						class="form-control" typeahead-editable=false typeahead-wait-ms=100 required />
+	  			<p ng-if="newServiceRequestForm.locality.$error.required" class="help-block" translate>servicerequest.messages.locality</p>
+  			</div>
+  		</div>
+		<div class="form-group">
+			<label translate>global.form.yourname</label>
+          	<input type="text" class="form-control" ng-model="request.nameOfContact">		          	     
+		</div>
+		<div class="form-group">
+			<label translate>global.form.contactemail</label>
+          	<input type="email" name="email" class="form-control" ng-model="request.contactEmail" placeholder="{{'global.form.contactemail.placeholder' | translate}}" ng-maxlength=255>		          	     
+	        <p ng-if="newServiceRequestForm.email.$error.email || newServiceRequestForm.email.$error.required" class="help-block" translate>global.messages.error.validemail</p>
+    		<p ng-if="newServiceRequestForm.email.$error.maxlength" class="help-block" translate>global.messages.error.emailtoolong</p>		          	     	
+		</div>
+		<div class="form-group">
+			<label translate>global.form.contactnumber</label>
+			<div class="inner-addon left-addon">
+				<i class="glyphicon glyphicon-phone"></i>
+         		<input type="text" class="form-control" ng-model="request.contactNumber" placeholder="{{'global.form.contactnumber.placeholder' | translate}}">
+         	</div>		          	     
+		</div>
+		<div class="form-group">
+			<label translate>servicerequest.besttimetocontact</label>
+         	<textarea class="form-control" ng-model="request.bestTimeToContact" placeholder="{{'serviceRequest.besttimetocontact.placeholder' | translate}}"></textarea>		          	     
+		</div>
+		<div class="form-group">
+			<h4 translate>servicerequest.material</h4>	
+			<label class="radio-inline">
+			  	<input type="radio" name="inlineRadioOptions" ng-model="request.willProvideMaterials" value="true"> {{'global.yes' | translate }}
+			</label>
+			<label class="radio-inline">
+			  	<input type="radio" name="inlineRadioOptions" ng-model="request.willProvideMaterials" value="false"> {{'servicerequest.ownmaterial' | translate }}
+			</label>          	     
+		</div>
+		<div class="form-group">
+			<h4 translate>servicerequest.budget</h4>
+			<label translate>servicerequest.maxprice</label>
+			<div class="input-group">
+				<div class="input-group-addon">{{request.currency}}</div>
+	         	<input type="text" name="maxPrice" class="form-control" ng-model="request.maxPrice" fcsa-number="{max: 1000000000000, min: 0, maxDecimals: 2, preventInvalidInput: true}">		          	     
+				<p ng-if="newServiceRequestForm.maxPrice.$invalid" class="help-block" translate>global.messages.error.price</p>
+			</div>
+			<label translate>servicerequest.currency</label>
+			<select class="form-control" ng-model="request.currency" ng-options="currency for currency in service.currencies"></select>
+		</div>	
+		<div class="form-group">
+			<h4 translate>servicerequest.dates</h4>
+			<label translate>servicerequest.startdate</label> 
+            <input type="text" class="form-control" datepicker-popup="dd.MM.yyyy" ng-model="request.startBy" is-open="opened" min-date="minDate" max-date="'2016-06-22'" datepicker-options="{formatYear: 'yy', startingDay: 1 };" ng-required="true" close-text="Zatvori" current-text="Danas" clear-text="Očisti"/>
+            <span class="input-group-btn">
+            	<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>     	     
+		</div>	
+		<div class="form-group">
+			<h4 translate>servicerequest.dates</h4>
+			<label translate>servicerequest.startdate</label> 
+            <input type="text" class="form-control" datepicker-popup="dd.MM.yyyy" ng-model="request.endBy" is-open="opened" min-date="minDate" max-date="'2016-06-22'" datepicker-options="{formatYear: 'yy', startingDay: 1 };" ng-required="true" close-text="Zatvori" current-text="Danas" clear-text="Očisti"/>
+            <span class="input-group-btn">
+            	<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>     	     
+		</div>		
+		<div class="form-group">
+			<label translate>servicerequest.description</label>
+			<textarea class="form-control" ng-model="request.description"></textarea>	          	     
+		</div>			
+		
+		 <div class="form-group" style="text-align: right">	
+		 	<button type="submit" style="margin-top: 10px" class="btn btn-danger btn-lg" scroll-to-bookmark><i class="glyphicon glyphicon-save" translate></i>servicerequests.new</button>	
+		</div>
+	</form>
+</body>
+</html>

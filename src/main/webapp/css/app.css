@@ -1,0 +1,1109 @@
+/* app css stylesheet */
+body {
+	font-family: 'Open Sans',Arial,sans-serif;
+	font-weight: 400;
+	height: 100%;
+	padding-top: 51px;
+	color: #4e4e4e;
+	word-wrap: break-word;
+}
+
+strong, b {
+    font-weight: 600;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-black {
+	color: #333;
+}
+
+.btn-cta {
+    background-color: #c52d2f;;
+    border-color: #d43f3a;
+    color: #fff;
+}
+
+.btn-cta:hover, .btn-cta:focus {
+    color: #fff;
+}
+	
+.inline {
+	display: inline;
+}
+
+input[type="radio"] {
+  margin-top: -3px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+input[type="checkbox"] {
+	margin-right: 2px;
+}
+
+.profileArea i {
+	margin-right: 5px;
+}
+
+.nav,.pagination,.carousel, a, i {
+	cursor: pointer;
+}
+
+a:hover, a:focus {
+	text-decoration: none;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+h2 {
+	margin: 15px 0;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+h4 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+h6 {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans',Arial,sans-serif;
+	
+}
+
+.lead {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.bg-danger {
+	background-color: #d9534f;
+}
+
+.bg-highlight {
+	background-color: #f2f2f2;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.quote {
+	color: #94a3a8;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 28px;
+}
+
+.client {
+	color: #94a3a8;
+	font-size: 16px;
+}
+
+.client strong {
+	color: #384047;
+    font-size: 16px;
+}
+
+.paragraph {
+	font-size: 16px;
+	line-height: 26px;	
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+/*********************************/
+/* OpenLayers style overriding  */
+/*********************************/
+
+/* Styling OpenLayers Zoom Control to have a white background instead of the default blue one */
+
+div.olControlZoom {
+	background:none !important;
+}
+
+div.olControlZoom .olControlZoomIn,
+div.olControlZoom .olControlZoomOut,
+div.olControlZoom .olControlZoomIn:hover,
+div.olControlZoom .olControlZoomOut:hover  {
+	background: white;
+	color: black;
+}
+
+/* Hiding the default layer switcher for all maps */
+.olControlLayerSwitcher {
+	display: none;
+} 
+
+/*********************************/
+/* For some reason, this style is not present in our version of bootstrap.min.css */
+/*********************************/
+.container-fluid {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*********************************/
+/* Changing active style of Bootstrap dropdown */
+/*********************************/
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: #ffffff;
+    border-color: #ccc;
+    color: #333;
+}
+
+/*********************************/
+/* CUSTOM CAROUSEL STYLES */
+/*********************************/
+
+/* We don't want indicatorson AngularUI-Bootstrap's carousels */
+.carousel-indicators {
+	display: none;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    height: 250px;
+    line-height: 1;
+    width: 100%;
+}
+
+.carousel-caption {
+	background-color: #333333;
+    bottom: 0px;
+    color: #fff;
+    left: 15%;
+    opacity: 0.9;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    position: absolute;
+    right: 15%;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+/*********************************/
+/* GENERAL - FORM VALIDATION */
+/*********************************/
+
+.form-group .help-block {
+  display: none;
+}
+
+.form-group.has-error .help-block {
+  display: block;
+}
+
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 8px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+
+/*********************************/
+/* REGISTRATION */
+/*********************************/
+
+.modal-dialog {
+	max-width:500px; 
+}
+
+.modal-footer {
+	margin-top: 0px;
+}
+
+.modal-header-background {
+	color:white;
+	background-color: #0b333f;
+    background-repeat: repeat;
+    border-color: #f0bf00;
+    border-width: 0 0 1px;
+}
+
+/*********************************/
+/* NAVBAR */
+/*********************************/
+
+.navbar-header h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 10px;
+	
+}
+
+.navbar-header .navbar-toggle {
+    background: none repeat scroll 0 0 #f0bf00 !important;
+    border-radius: 3px;
+}
+
+.navbar .brand a {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 0;
+    padding: 0;
+}
+
+.navbar .brand span {
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.navbar .brand a:hover {
+	text-decoration: none;
+	color:#f0bf00;
+	transition: color .15s linear;
+	-webkit-transition: color .15s linear;
+	-moz-transition: color .15s linear;
+}
+.navbar .brand a:focus {
+	outline: none;
+}
+
+.navbar-inverse {
+    background-color: #0b333f;
+    background-repeat: repeat;
+    border-color: #f0bf00;
+}
+
+.navbar-nav .dropdown-menu > li > a {
+    color: #fff;
+    font-weight: 600;
+    padding: 3px 0;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #fff;
+    font-weight: 600;
+	padding-right: 10px;
+	padding-top: 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a.btn {
+	margin: 15px 30px 0 10px;
+	padding: 0;
+}
+ 
+.navbar-nav .dropdown-menu {
+	 background-color: #0b333f;
+	 color: #fff;
+	 line-height: 20px;
+	 padding: 0 0.4em;
+	 min-width: 100px;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:focus,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-nav .dropdown-menu > li > a:hover {
+    color:#f0bf00;
+    background-color: #0b333f;
+}
+
+
+/*********************************/
+/* HOMEPAGE - SEARCH */
+/*********************************/
+
+.homepage {
+	background: url('/img/tools.jpg') no-repeat fixed center center / cover #0b333f;
+	min-height:600px;
+	padding: 130px 10px;
+    width: 100%;
+}
+
+.homepage .container {
+	max-width: 1000px;
+}
+
+/*********************************/
+/* HOMEPAGE - FEATURES */
+/*********************************/
+
+.section-title {
+	margin-bottom: 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.section-title h2 {
+    color: #384047;
+}
+
+.section-title h4 {
+    color: #94a3a8;
+}
+
+.features {
+    margin: 25px 0;
+}
+
+.thumbnail {
+    border: 0 none;
+    text-align: center;
+}
+
+.thumbnail img {
+    transition: all 0.6s ease 0s;
+}
+
+/* .thumbnail .caption p { */
+/*     color: #94a3a8; */
+/* } */
+
+.customervalueproposition {
+	background: url('/img/header-bg.jpg') no-repeat fixed center center / cover #0b333f;
+	color: white;
+	min-height:300px;
+	padding: 50px;
+	text-align: center;
+	width:100%
+}
+
+.customervalueproposition h4,
+.mission h4 {
+	line-height: 28px;
+}
+
+.highlight {
+	background: none repeat scroll 0 0 #f4f4f4;
+    margin-top: 40px;
+}
+
+.highlight .thumbnail {
+	background: none repeat scroll 0 0 #f4f4f4;
+}
+
+.contact {
+	background-color: #2f2f2f;
+    color: white;
+    margin-top: 40px;
+    padding-bottom: 60px;
+    padding-top: 40px;
+    text-align: left;
+}
+
+/*********************************/
+/* SALES PAGE FOR PROFESSIONALS */
+/*********************************/
+
+/* .prosLandingPage { */
+/* 	background-color: #f4f4f4; */
+/* } */
+
+/* .prosLandingPage .container, */
+/* .prosLandingPage .container-fluid { */
+/* 	background-color: white; */
+/* } */
+
+.valueProposition .quote {
+    margin-top: 10px;
+}
+
+.valueProposition li {
+	background: url("../img/check.png") no-repeat 0 0;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 10px;
+    padding-left: 36px;
+}
+
+.signupArea {
+	background: none repeat scroll 0 0 #f4f4f4;
+	border: 2px solid;
+	border-radius: 25px;
+	margin: 25px 0;
+	padding: 10px;
+}
+
+.signupButton {
+	background-color: #d2322d;
+	font-size: 22px;
+	white-space: normal;
+}
+
+.valueProposition h5 {
+	color: #94a3a8;
+}
+
+.pro-divider {
+	border-top: 1px dotted grey;
+	margin: 0;
+}
+
+.bg-danger i {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+    
+.profeatures .row {
+	margin: 80px 0;
+}   
+
+.profeatures h3 {
+	font-weight: 600;
+}
+
+.superfeature {
+	background: none repeat scroll 0 0 #3498db;
+	padding-bottom: 10px;
+}
+
+.panel-success > .panel-heading {
+    background-color: #3c763d;
+    border-color: #d6e9c6;
+    color: white;
+}
+
+.prosLandingPage .list-group-item {
+	background: none repeat scroll 0 0 #f4f4f4;
+}
+
+.priceCents {
+	vertical-align: super;
+	font-size: 50%;
+}
+
+.pricingPeriod {
+	font-size: 50%;
+}
+  
+
+/*********************************/
+/* PROFESSIONAL'S PROFILE */
+/*********************************/
+
+.profileArea {
+	background: url('/img/blueprint.jpg') no-repeat fixed center center / cover #0b333f;
+	min-height: 800px;
+	padding-bottom: 50px;
+}
+
+.profileImage {
+	background-color: white;
+	border: 2px solid white;
+    border-radius: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	text-align:center;
+}
+
+.profileMenu {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.profileSection {
+	background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.filterTitle {
+	font-size: 12px;
+	font-weight: bold;
+	display: block;
+}
+
+.checkbox {
+	display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    min-height: 20px;
+    padding-left: 20px;
+    vertical-align: middle;
+    font-weight: normal;
+}
+
+.radioLabel {
+	margin-bottom: 1px;
+	margin-right: 5px;
+	display: block;
+}
+
+/*********************************/
+/* INPUT SELECT DIRECTIVE STYLES */
+/*********************************/
+.dropdown-menu.input-select>li>a:hover {
+	cursor: pointer;
+}
+
+.label.input-select {
+	display: table-cell;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.list>ul {
+	list-style: none;
+}
+
+/******************************************/
+/* SEARCH FILTER STYLES */
+/******************************************/
+
+.searchrow {
+	background-color: #efeff2;
+	border-bottom: 1px solid lightgray;
+    margin: 0;
+    padding: 0 2px;
+}
+
+.searchrow div {
+	padding: 0 2px 0 0;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.searchrow .dropdown-menu,
+.advancedFilter .dropdown-menu {
+	width:99%;
+	z-index: 1001;
+} 
+
+.distanceFilterTypeahead .dropdown-menu {
+	width: 250px;
+}
+
+.searchrow button {
+	border-radius: 0px;
+	width:100%; 
+}
+
+.search .searchrow button {
+	font-size: 15px;
+	font-weight: bold;
+	height: 40px;
+}
+
+.typeaheadicon {
+	position:absolute; 
+	top: 16px; 
+	left: 7px; 
+	z-index: 10;
+}
+
+.search .typeaheadicon {
+	top: 13px; 
+}
+
+.typeaheadinput {
+	border-radius: 0px;
+	font-size: 16px;
+	padding-left: 25px;
+}
+
+.search .typeaheadinput {
+	height: 40px;
+}
+
+.advancedFilter {
+	width: 100%;
+	padding: 10px;
+	margin: 0px;
+}
+
+/******************************************/
+/* SEARCH SCREEN - MAIN CONTENT */
+/******************************************/
+
+.loading {
+    color: lightgray;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.loading-map {
+    min-width: 200px;
+}
+
+.mainContent {
+	bottom: 0;
+	left:0;
+	right:0;
+    position: absolute;
+    top: 99px;
+}
+
+.alert-summary {
+	padding: 5px;
+	position: absolute;
+	right: 10px;
+    top: 5px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.itemTree {
+	bottom: 0;
+	width:220px;
+	left:0;
+	right:0;
+    position: absolute;
+    top: 0;
+    border-right: 1px solid lightgray;
+}
+
+.buttonToggle {
+	background-color:grey;
+	color: white;
+	position: absolute;
+	top: 45%;
+	z-index:999;
+	
+}
+
+.buttonToggleItemTreeLeft {
+	left: 0;
+}
+
+.buttonToggleItemTreeLeftOffset {
+	left: 220px;
+}
+
+#map {
+	bottom: 0;
+    position: absolute;
+    top: 0px;	
+}
+
+.mapLeft {
+	left:0;
+}
+
+.mapLeftOffset {
+	left:220px;
+}
+
+.mapRight {
+	right:0;
+	width:100%;
+}
+
+.mapRightOffset {
+	right:320px;
+}
+
+.buttonToggleListRight {
+	right: 0;
+}
+
+.buttonToggleListRightOffset {
+	right: 320px;
+}
+
+/******************************************/
+/* ITEM TREE STYLES */
+/******************************************/
+
+.heading-item-tree {
+    color: black;
+    display: block;
+    margin: 10px 0 10px 10px;
+}
+
+.listItems {
+	bottom: 0;
+    position: absolute;
+    top: 60px;	
+    padding-left: 10px;
+    overflow-y:auto;
+    width:100%;
+    padding-left: 20px;
+}
+
+.itemTree a {
+	color: black;	
+}
+
+.itemTree a:hover {
+	color: orange;	
+}
+
+/******************************************/
+/* SEARCH FOR PROFESSIONALS - MAP STYLES */
+/******************************************/
+
+.mapLegend {
+	background-color: #ffffff;
+	padding: 5px;
+	position: absolute;
+	right: 10px;
+    top: 55px;
+    white-space: nowrap;
+    width: 155px;
+    z-index: 10;
+}
+
+.colorscale {
+	float:left;
+	margin-left: 40px;
+    margin-top: 10px;
+	width: 20px;
+}
+
+.ranges {
+	float:left;
+ 	margin-top: 17px;
+}
+
+.ranges span {
+	display: block;
+	margin-left: 5px;
+   	
+}
+
+/******************************************/
+/* LIST STYLES */
+/******************************************/
+
+.loading-list {
+    padding: 100px 0;
+}
+
+.list-sortControl {
+    height: 70px;
+    padding: 5px 20px;
+    width: 100%;
+}
+
+.list-pagerControl {
+	border-bottom: 1px solid lightgray;
+    height: 30px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.listDetails {
+	bottom: 0;
+	overflow-y: auto;
+	padding: 5px;
+    position: absolute;
+    right:0;
+    top: 30px;	
+}
+
+.buttonCloseDetails {
+	color: gray;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.button-sort {
+	text-align: left;
+	width: 100%;
+}
+
+.dropdown-caret {
+	position: absolute;
+    right: 5px;
+    top: 50%;
+}
+
+.listContent {
+	bottom: 0;
+	right:0;
+    position: absolute;
+    top: 0;	
+    width:320px;
+}
+
+.listContainer {
+	bottom: 0;
+    position: absolute;
+    top: 70px;	
+    overflow-y:auto;
+    width:100%;
+}
+
+.listContainer li {
+	 border-width: 1px 0 0 0;
+}
+
+.listImage {	
+	display: inline-block;
+	height: 55px;
+    margin-top: 5px;
+    vertical-align: top;
+    width: 65px; 
+
+}
+
+.listInfo {
+	display: inline-block;
+	margin-left: 5px;
+    width: 157px;
+}
+
+
+/******************************************/
+/* LIST PROFESSIONAL ROW STYLES */
+/******************************************/
+
+.spanImage {
+	width: 14px; 
+	height: 14px;
+	margin-right: 5px;
+}
+
+.addressline {
+	color: black;
+}
+
+.professions {
+	color: grey;
+}
+
+.listInfo span {
+	display: block;
+}
+
+.listInfo .rating {
+	display: inline;
+	color:gold;
+}
+
+.listBadge {
+	vertical-align: top;
+}
+
+/******************************************/
+/* LIST - PAGER STYLES */
+/******************************************/
+
+.listPager {
+	font-weight:bold;
+	font-size:11px;
+	margin-left: 50px;
+}
+
+ul.listPager li a {
+	color: gray;
+	margin-right:4px;
+}
+
+.pagination > .active a {
+	background-color: lightgray;
+    border-color: gray;
+    color: black;
+}
+
+/******************************************/
+/* SCORE DETAILS */
+/******************************************/
+
+.scoreFactors ul {
+	display: inline;
+	margin-left: 5px;
+}
+
+.scoreFactors li {
+	margin-top: 10px;
+}
+
+/******************************************/
+/* PROFESSIONALS'S PROFILE */
+/******************************************/
+
+.prohomepage {
+	min-height: 400px;
+    width: 100%;
+}
+
+.profileImageOverlay {
+	background: rgba(0,0,0,0.3);
+    height:100%;
+    padding: 130px 10px;
+  	width:100%;
+}
+
+.prohomepage .container {
+	max-width: 1000px;
+}
+
+.profileNavbar {
+    background: none repeat scroll 0 0 #151515;
+    border-color: #222222;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 15px 0 0;
+}
+
+.profileNavbar .navbar-inverse {
+    border: medium none;
+}
+
+.profileNavbar .navbar-inverse .navbar-collapse, .profileNavbar .navbar-inverse .navbar-form {
+    border-top: 0 none;
+    padding-bottom: 0;
+}
+
+.profileNavbar .navbar-nav {
+    margin-top: 0px;
+}
+
+.overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color:#000;
+    opacity:0.5;
+    border-radius:30px;
+}
+
+.profileNavbar .navbar-nav > li {
+    margin-left: 35px;
+    padding-bottom: 10px;
+}
+
+.profileNavbar .navbar-collapse .navbar-nav > .active > a, .profileNavbar .navbar-collapse .navbar-nav > .active > a:hover, .profileNavbar .navbar-collapse .navbar-nav > .active > a:focus, .profileNavbar .navbar-collapse .navbar-nav > .open > a, .profileNavbar .navbar-collapse .navbar-nav > .open > a:hover, .profileNavbar .navbar-collapse .navbar-nav > .open > a:focus {
+    background-color: #c52d2f;
+    color: #fff;
+}
+
+.profileNavbar .navbar-nav > .active > a, .profileNavbar .navbar-nav > .active > a:hover, .profileNavbar .navbar-nav > .active > a:focus {
+    background-color: #080808;
+    color: #fff;
+}
+
+.profileNavbar .navbar-nav > li > a:hover, .profileNavbar .navbar-nav > li > a:focus {
+   background-color: #c52d2f;
+   color: #fff;
+}
+
+.profileNavbar .navbar-nav > li > a {
+    border-radius: 3px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    padding: 5px 12px;
+}
+
+.feature-wrap {
+    margin-bottom: 35px;
+}
+
+.feature-wrap i {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 100%;
+    box-shadow: 0 0 0 5px #f2f2f2 inset;
+    color: #c52d2f;
+    float: left;
+    font-size: 48px;
+    height: 110px;
+    line-height: 110px;
+    margin: 3px 25px 3px 3px;
+    text-align: center;
+    transition: all 500ms ease 0s;
+    width: 110px;
+}
+
+.feature-wrap h4 {
+    margin: 10px 0 20px 0px;
+}
+
+.portfolio-filter {
+    list-style: none outside none;
+    margin: 0 0 40px;
+    padding: 0;
+}
+
+.portfolio-filter > li a:hover, .portfolio-filter > li a.active {
+	background: none repeat scroll 0 0 #c52d2f;
+    border: 1px solid #c52d2f;
+    box-shadow: none;
+    color: #fff;
+}
+
+.portfolio-filter > li {
+	 margin-bottom: 5px;
+}
+
+.portfolio-filter > li a {
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 5px;
+    outline: medium none;
+    text-transform: uppercase;
+    transition: all 0.9s ease 0s;
+}
+
+/******************************************/
+/* METRICS */
+/******************************************/
+
+#threadDump .popover, #healthCheck .popover {
+    top: inherit;
+    display: block;
+    font-size: 10px;
+    max-width: 1024px;
+}
+
+#healthCheck .popover {
+    margin-left: -50px;
+}
+
+.alert .popover pre {
+    font-size: 10px;
+}
+
+.voffset  { margin-top: 2px; }
+.voffset1 { margin-top: 5px; }
+.voffset2 { margin-top: 10px; }
+.voffset3 { margin-top: 15px; }
+.voffset4 { margin-top: 30px; }
+.voffset5 { margin-top: 40px; }
+.voffset6 { margin-top: 60px; }
+.voffset7 { margin-top: 80px; }
+.voffset8 { margin-top: 100px; }
+.voffset9 { margin-top: 150px; }

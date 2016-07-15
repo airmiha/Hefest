@@ -1,0 +1,8 @@
+<div>
+	<button type="button" class="btn-link btn-small" ng-click="checkAll()"><span class="glyphicon glyphicon-ok"></span>  <span translate>global.multiselect.selectall</span></button>
+    <button type="button"  class="btn-link btn-small" ng-click="uncheckAll()"><span class="glyphicon glyphicon-remove"></span>  <span translate>global.multiselect.unselectall</span></button>
+    <label ng-repeat="i in items" class="checkbox">
+    	<input ng-model="i.checked" ng-change="setModelValue()" type="checkbox">{{i.label}}
+    </label>
+</div>
+

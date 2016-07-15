@@ -1,0 +1,768 @@
+{
+    "global": {
+        "title": "jhipster",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+        "account": {
+        	"signin": "Sign In",
+        	"register": "Sign Up",
+        	"joinHefest": "Join Hefest",
+        	"professionals": "Professionals",
+        	"users": "Users",
+        	"editprofile": "Edit profile",
+        	"logout": "Logout",
+        	"rememberme": "Remember me",
+        	"forgotpassword": "Forgot password?",
+        	"noaccount": "You don't have an account?",
+        	"alreadyamember": "Already a member?",
+        	"resetpassword": "Reset password"
+        },
+        "form": {
+        	"address": "Address",
+        	"yourname": "Your name",
+        	"companyname": "Company name",
+        	"password": "Password",
+        	"oldpassword": "Old password",
+        	"oldpassword.placeholder": "Your old password",
+            "newpassword": "New password",
+            "newpassword.placeholder": "Secure password - 6 characters minimum",
+            "confirmpassword": "Repeat password",
+            "resetpassword": "Reset password",
+            "email": "E-mail",
+            "contactemail": "Contact E-mail",
+            "contactemail.placeholder": "address@mail.com",
+           	"telephone": "Phone",
+           	"mobile": "Mobile",
+           	"fax": "Fax",
+           	"website":"Website",
+            "contactnumber": "Contact number",
+            "contactnumber.placeholder": "Telephone or mobile where a professional can contact you.",
+            "besttimetocontact": "Best time to contact you?",
+            "besttimetocontact.placeholder": "If a professional decides to call you, what time suits you best? Example given: 'Work days after 16 or weekends'", 
+            "email.placeholder": "Your e-mail address",
+            "mandatory":"mandatory",
+            "message": "Message",
+            "submit": "Send",
+            "sendresetpasswordlink": "Send a password reset link"           
+        },
+        "multiselect": {
+        	"selectall": "Select all",
+        	"unselectall": "Unselect all"
+        },
+        "messages": {
+            "info": {
+                "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Admnistrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
+                "register": "You don't have an account yet? <a href=\"#/register\">Register a new account</a>",
+                "passwordreset": "Your password has been successfully reset! You can sign in with your new password.",
+                "resetpasswordlink": "An e-mail with a link to reset your password has been sent to",
+                "requestpasswordresetlink": "Enter the e-mail address you registered with and we'll send you an e-mail with a link to reset your password."                       
+            },
+            "error": {
+            	"signupfailed": "Sign up failed!",
+            	"checkdata": "Check your data and try again.",
+            	"alreadyregistered": "This e-mail address is already registered!",
+            	"trytosignin": "Try to sign in.",
+            	"signinfailed": "Sign in failed",
+            	"checkusernamepassword": "Please check your username and password and try again.",
+                "dontmatch" : " Passwords don't match!",
+                "processing": "There was an error while processing the request!",
+                "checkinput": "Check your input and try again.",
+                "validemail": "The entry has to be a valid e-mail address.",
+                "emailtoolong": "The e-mail address can't have more than 256 characters.",
+                "price": "The price has to be a positive number, e.g. 1,567 and have no more than two decimal places",
+                "processingrequest": "There has been an error while processing the request!",
+                "passwordreset": "The password couldn't be reset. The request wasn't found or it expired. Try to make a new request.",
+                "resetpasswordlink": "There has been an error while sending the email to", 
+                "tryagain": "Please try again."
+            },
+            "validate": {
+                "password": {
+                    "required": "A password is mandatory.",
+                    "minlength": "The password has to be at least 6 characters long.",
+                    "maxlength": "The password can't have more than 50 characters."
+                },
+                "email": {
+                    "required": "An e-mail address is mandatory.",
+                    "invalid": "Your e-mail is invalid.",
+                    "minlength": "Your e-mail is required to be at least 5 characters",
+                    "maxlength": "Your e-mail cannot be longer than 50 characters"
+                },
+                "companyname": {
+                	"required": "Company name is required.",
+                	"maxlength": "Company name can't have more than 100 characters."
+                }
+            }
+        },
+        "or": "or",
+        "currency": "currency",
+        "search": "Search",
+        "applyfilters": "Apply filters",
+        "reset": "Reset",
+        "professionals": "Professionals",
+        "projects": "Past projects",
+        "forprofessionals": "For professionals",
+        "owner": "Owner",
+        "show": "Show",
+        "hide": "Hide",
+        "close": "Close",
+        "for": "for",
+        "orderBy": "Order by:",
+        "showing": "Showing:",
+        "inrange": "In range of: ",
+        "from": "from: ",
+        "center.placeholder": "City, town, village, address...",
+        "contact": "Contact",
+        "all": "All",
+        "date":"Date"
+    },
+    "orderby": {
+    	"nameasc": "Name (A-Z)",
+    	"namedesc": "Name (Z-A)",
+    	"dateasc":"Oldest",
+    	"datedesc":"Newest",
+    	"costasc":"Highest cost",
+    	"costdesc":"Lowest cost",
+    	"images": "Number of images",
+    	"comments": "Comments number",
+    	"likes": "Likes"
+    },
+    "search": {
+    	"searching": "Searching...",
+    	"professional.placeholder": "Search by profession, service, company name...",
+    	"servicearea.placeholder": "Where do you need the service? County, town...",
+    	"filters": "Filters",
+    	"wefound": "We found",
+    	"fetchingdata": "Fetching data...",
+    	"allprofessions": "All professions",
+    	"previous": "« Previous",
+    	"next": "Next »",
+    	"backtolist": "To list"
+    },
+	"homepage": {
+		"headline": "Find a quality and reliable professional",
+		"subheadline": "Search for home improvement professionals by profession, service or their past work.",
+		"customer": {
+			"headline": "Get your project done without headaches and delays",
+			"subheadline": "You have bad experiences with unreliable contractors? You need a trusted recommendation? Unlike the yellow pages, forums and random word of mouth, we give you enough information about professionals to make a smart decision.",
+			"benefit1": "Easily search and compare professionals",
+			"feature1": "Choose the right one through an interactive map. See who performed work for your friends or in the neighborhood.",
+			"benefit2": "Plan better using data about past projects",
+			"feature2": "Browse data about past work and pictures from before and after. Get insights about performers, prices and other details." ,
+			"benefit3": "See what others think about a professional",
+			"feature3": "Read reviews from past clients. Find out who recommends him: maybe one of your friends or neighbours?",
+			"benefit4": "Describe your project and wait for proposals",
+			"feature4": "You don't want to search? Leave a description of the work you need done and get several proposals from quality professionals.",   
+			"valuepropositionheadline": "100% Verified data. Real pictures. Genuine recommendations.",
+			"valuepropositionsubheadline": "We collect, verify and organize data about professionals to help you make an easy choice. We recommend the best ones for you based on client satisfaction, distance, number of past projects in your vicinity and opinions of your friends.",
+			"testimonialsheadline": "What do people we helped get a great service have to say",
+			"testimonial1": "&ldquo; I had to remodel my apartment and had no idea who to hire because I didn't have a good recommendation. Using Hefest I found a contractor in a neighboring town that already did some work in my street. &rdquo;",
+			"testimonial2": "&ldquo; My husband and I wanted a custom made kitchen. It was a big investment and we had troubles finding a carpenter. We browsed past kitchen projects and found a great carpentry that we were very satisfied with. &rdquo;",   		
+			"testimonial3": "&ldquo; I needed a plumber for remodeling my bathroom. As soon as I opened the search screen, I got presented with a professional who worked for a colleague from work that is also a Facebook friend. Awesome experience. &rdquo;"    		
+		},
+		"professional": {
+			"headline": "You are a contractor or company looking for more work?",
+			"subheadline": "Hefest helps you increase income and gives you quality leads from people that use the Internet to find a professional for their next project. Efficiently and with better return on investment than paid listings on yellow pages. Find out how.",
+			"benefit1": "Present yourself with a professional profile",
+			"feature1": "Your profile is a modern beautifully designed web page built specifically to get you a steady income of leads.",
+			"benefit2": "Showcase the portfolio of your past work",
+			"feature2": "Show the quality of your craftmanship in front of people looking for similar services and get their business." ,
+			"benefit3": "Collect testimonials from past clients",
+			"feature3": "Recommendations and online reputation help grow your business. Use them to attract new clients.",
+			"benefit4": "Get notified about requests for proposals",
+			"feature4": "Be immediately notified about new projects in your vicinity. We save your time by sending only verified leads that match your needs.",   
+			"followup": "And many more tools that help get you more work...",
+			"calltoaction": "Find out more"
+		},
+		"mission": {
+			"headline": "Our mission is to help skilled professionals always have work and people get a great service every time.", 
+			"subheadline": "We want to take advantage of modern technology to connect great professionals with people who are looking for their services so that everyone wins.", 
+			"plan": "From planning...",
+			"work": "to work...",
+			"bbq": "...and beers with barbecue" 
+		},
+		"partnersheadline":"Our partners",
+		"partnerssubheadline":"Organisations that help Hefest follow its vision",
+		"user": {
+			"headline": "Improve your search experience and support your favorite professionals",
+			"subheadline": "Join Hefest and get additional benefits, for free.",
+			"benefit1": "Connect your account with Facebook",
+			"feature1": "Find out which professionals know your friends, have done work in their homes or are recommended by them.",
+			"benefit2": "Review or recommend professionals",
+			"feature2": "Rate the quality of service after a project has been completed and help other people in their decision.",
+			"benefit3": "Search and filter based on your location",
+			"feature3": "Map your home and see professionals and projects in your neighborhood or recommendations from neighbors. ",
+			"calltoaction": "Join Hefest"
+		},
+		"contact": {
+			"headline": "Contact us for questions or co-operation"
+		}
+    },
+   	"salespage": {
+		"headline": "Get more work and increase income.",
+		"subheadline": "We help great home improvement and other professionals get more high quality leads over the Internet .",
+		"moneyshot": {
+			"headline": "<strong>&ldquo; We got 11 new projects in 3 months &rdquo;</strong>",
+			"testimonial": "&ldquo; In 3 months we got a hundred leads and 11 new projects from Hefest, more than from word of mouth recommendations. We stopped maintaining our old web page and reduced costs from advertising in the newspapers and yellow pages.&rdquo;"
+		},
+		"topclient": "Owner, <a>MB Installations</a>",
+		"secondheadline": "With a profile on Hefest you'll get quality leads all year long - starting now",
+		"introduction": "Unlike the yellow pages or regular web sites, you get a set of tools to grow your business online and a profile designed to help more people find you and choose you over the competition.",  
+		"valueproposition2":"<strong>Creating an account takes 30 seconds</strong>, you don't need to worry about maintaining your profile and we help you write content that increases the number of leads.",
+		"valueproposition3":"<strong>You get tools to showcase your past work and customer satisfaction</strong> as a 100% proven method of building trust and increasing the chances that people give you their business.",  
+		"valueproposition4":"<strong>You have free 24/7 support</strong>. We work together with you on growing your business and building your brand.",	  
+		"calltoactionheader": "<strong>Join Hefest and start getting more work today.</strong>",
+		"calltoactionexplanation": "Try our service for free. You can cancel at any time.",
+		"calltoaction": "<strong>Give me my profile - 90 days free</strong>",	
+		"orcallus": "Or call us:",
+		"calltoactionfollowthrough": "(Creating an account takes 30 seconds. The trial period is completely free. There is no contract and no credit card required.)",
+		"happycustomers": "500+ happy customers",
+		"testimonialsheadline": "What do companies that tried our service and use it to grow their business have to say",
+		"client1": "<strong>Ivan Kovačić</strong><br>Owner, <a> Kovačić construction</a>",
+		"client2":"<strong>Jelena Miholjević</strong><br>Marketing director, <a> Carpentry Minković</a>",
+		"client3": "<strong>Ljubo Zečević</strong><br>Founder and owner, <a> Zečević flooring</a>",
+		"testimonial1": "&ldquo; In the last 6 months Hefest brought us twenty new projects and doubled our leads, while at the same time reducing our advertising costs. We're happy with a large number of big projects that we usually prefer, such as building a family home. &rdquo;",		
+		"testimonial2": "&ldquo; We replaced our old webpage with a profile on Hefest. Besides looking more professional, instead of 2 or 3 leads a week we get over a dozen. We feel great when people ask us to build them something they saw in one of our past projects. &rdquo;",   			
+		"testimonial3": "&ldquo; This is my first attempt of Internet advertising. The team from Hefest helped me fine tune my profile and after 3 days I already found two serious clients. I regularly add new projects to my portfolio and collect testimonials. I wish I had this tool before. &rdquo;",
+		"reinforcement" : {
+			"headline": "Are you losing income by not efficiently advertising online?",
+			"subheadline": "By joining Hefest you get all the tools you'll ever need to attract clients over the Internet.",
+			"benefit1": "Demonstrate quality",
+			"detail1": "You're a quality professional? Request access to Hefest.",
+			"benefit2": "Promote your brand",
+			"detail2": "Grow your business online with our tools and support.",
+			"benefit3": "Get leads",
+			"detail3": "Attract more clients, cut advertising costs and increase income."      
+		},
+		"benefit1": "Get a professionally designed web page that makes visitors interested in your offer",
+		"feature1": {
+			"opinion": "People form an opinion about your web pages in less than ",
+			"impression": "This number is a result of a series of research about the time required for a person to subconsciously decide whether he likes the page or not.",   
+			"decide": "and decide whether they will stay or leave.",
+			"trust": "Great design creates trust. If your pages look ancient or like a yellow pages ad, this is enough to drive potential customers away.",
+			"yourprofile": "Your profile on Hefest is a professionally designed web page built for superb user experience.",
+			"looksgood": "It looks good",
+			"resize": "Try to reduce the screen size to see how the page adapts to smaller screen sizes and looks great on a mobile device as well as on a desktop computer.",
+			"mobile": "on all devices, from phones to desktops, which means that mobile users won't go to the competition frustrated with poor site usability.",   			
+			"objection": "&ldquo;But, what if I already have a website... &rdquo;",
+			"study": "Companies all over the world invest in their websites to achieve better results. Only 2,5 weeks after redesign, this tie webshop increase its total revenue by <strong>42,4%</strong>, with revenue from mobile devices by <strong>377,6%</strong>:",
+			"followup": "Think of your profile on Hefest as a web page on steroids. It can promote you together with your existing site (and get more leads) or replace it." 
+		},
+		"benefit2": "Convert more visitors into paying clients",
+		"feature2": {
+			"goal": "The goal of your advertising is to get quality leads. If your web page isn't <strong>built to sell</strong> and present a strong case about your offer, investments in getting visitors, either through free channels or paid ads, won't bring any returns.",
+			"action": "Your profile on Hefest is strategically designed to give the visitor complete information about your business in a way that encourages him to take your offer. You get a profile that is not just attractive but also efficient in generating leads.",   
+			"results": "The results come from careful planning using data from years of research on marketing and the science of",
+			"conversion": "conversion",
+			"conversionoptimization": "Conversion optimization is a method of tuning web pages with the goal of converting more visitors into customers.",
+			"explanation": "Practical use of the science of conversion is the cheapest and fastest way to increase revenue. If your web page turns <strong>1%</strong> of visitors into paying customers and you're able to increase that number to <strong>2%</strong>, you've just <strong>doubled</strong> your revenue."			  			
+		},
+		"benefit3": "Get found on Google and other search engines.",
+		"feature3": {
+			"seo": "Search Engine Optimization - a set of rules for improving a website and increasing the number of visitors that come from search engines",
+			"searchusage": "Over 80% of Internet users actively use search engines. Most of them click on one of the pages that are on top of organic results when searching for a product or service. Your ranking in results determines the number of visits to your page.",    
+			"seohelps": "is essential for good rankings and needs constant work. With a profile on Hefest you get SEO out of the box, a boost from Hefest's brand authority and a <strong>free</strong> service of improving your content to push you even higher in results.",
+			"service": "Our experts take care of SEO for you. We invest in skills and best SEO tools to increase exposure of our clients.  <strong>You rank higher </strong> in searches for your products and services than other businesses with custom web pages or yellow pages ads."  
+		},
+		"benefit4": "Get recommended to prospects who are looking for professional services through our search tool",
+		"feature4": {
+			"p1": "You appear in results of our search tool in front of people who are looking for services and products with the intention to hire or buy. They can see your location, past work, endorsements, user reviews and a link to your profile.",
+			"p2": "You get recommended to people close to you, those from areas where you worked before, or whose friends were your past clients. Your rank in results depends on your quality. <strong>Unlike the yellow pages, no one can buy a place above you.</strong>",
+			"p3": "We connect you with clients that are a good match for you with the help of our data driven algorithms. This not only brings you more clients but also better jobs that are higher in value and closer in terms of travel distance."  
+		},
+		"benefit5": "Attract new clients by showing your past work", 
+		"feature5": {
+			"p1": "People often don't know what they want until they see it. By showing pictures and other data about your past work you not only <strong>promote your craftsmanship</strong> but also help people decide they want the same service or product - from you.",
+			"p2": "Your work is organized and appears in front of people through our search tools and your profile. You need <strong>less than 5 minutes</strong> to add details about a completed project and every new entry increasing the chances of getting a new client."  
+		},
+		"benefit6": "Prepusti brigu o sadržaju svog profila nama i ostvari još bolje rezultate.",   
+		"feature6": {
+			"caption": "<strong>Riječi su bitne</strong>",
+			"detailedcaption": "Copywriting konzultant Michael Asgaard je ovom promjenom skandinavskom lancu teretana <em>'Fitness World'</em> udvostručio članstvo.",  
+			"p1": "Opis tvoje ponude je najbitniji dio profila i određuje hoće li posjetitelj htjeti znati više ili će otići na drugu stranicu. Dobra prezentacija ponude će značajno povećati broj ljudi koji će okrenuti tvoj broj ili ti poslati poruku.",
+			"p2": "Želiš dati razlog posjetitelju zašto da izabere tebe, a ne konkurenta. Ljudi prouče 5-10 poduzeća prije donošenja odluke i zato je bitno imati ponudu koja se ističe. Nudimo ti besplatnu pomoć u pisanju inicijalnog sadržaja nakon registracije.",
+			"p3": "Tekst na tvojoj stranici mora uvjeriti posjetitelja da svoj teško zarađeni novac da tebi, a ne nekom od mnogobrojne konkurencije. Svaka rečenica koju pišemo za tebe ima uporište u dokazanim principima oglašavanja i planirana je da radi prema ovom cilju.",  
+			"objection": "<em>&ldquo; Ali, već pišem prema osjećaju i onome što zvuči dobro...&rdquo; </em>",
+			"handling": "Svaki majstor radi na temelju znanja, vještine i iskustva, a ne osjećaja. Ista je stvar i s tekstom oglašavanja. Razlika između prosječnog i odličnog teksta je, osim u generiranim prihodima, u znanju provjerenih praksi. Mi smo ih proučili za tebe."
+		},
+		"testimonialsvalueheadline": "Get more clients by collecting genuine endorsements and testimonials.",
+		"testimonialsvaluesubheadline": "Your clients are delighted with your services and recommend you to their friends? Show it to people who meet you for the first time online.",
+		"benefit7": "Build trust with visitors of your profile and rank higher in our search results with client testimonials",   
+		"feature7": {
+			"p1":"Opinions from others and word of mouth are the <strong>strongest driving force for hiring and purchasing decisions</strong> but the great majority of companies doesn't actively collect them and use them for online promotion in an effective way.", 
+			"p2": "With our tools for collecting and demonstrating client testimonials you'll be ahead of the competition that still doesn't leverage the power of word of mouth to generate new business. You'll also get better positions in Hefest's search results.",
+			"p3": "It's easy to collect testimonials with <strong>our free mobile app</strong>. You can connect them with projects, add details about the client and upload his picture for a massive boost in credibility in moments where a visitor makes his purchasing decision."  
+		},
+		"benefit8":"Mogu li i negativne kritike pomoći?",
+		"feature8": {
+			"p1": "Vjerovao ili ne, <strong>nekoliko negativnih kritika može pomoći</strong>. Na ozbiljnim portalima za svaki proizvod ili uslugu postoje miješane kritike. Loša kritika zapravo povećava vjerodostojnost onih dobrih.",
+			"p2": "Reevo, firma koja se bavi analizom online tržišta proizvoda i usluga, odlučila je provjeriti utjecaj loših kritika na posjetitelje, i to na uzorku od 2,5 milijuna kritika. Našli su da <strong>68% ljudi više vjeruje miješanim kritikama.</strong>",
+			"p3": "Naravno, previše negativnih kritika odmaže. Iako te ljudi mogu i sami recenzirati, sve kritike provjeravamo i u svakom trenu možeš osporiti onu za koju smatraš da nije vjerodostojna ili je podmetnuta."      
+		},
+		"benefit9":"Get endorsed for your services and endorse other professionals",
+		"feature9": {
+			"p1": "Your profile lets both homeowners and companies endorse you as their top choice. Everyone can give <strong>only two recommendations for a profession</strong>. This limit makes each of them a strong and positive statement about your company.",
+			"p2": "These recommendations are even more powerful than old fashioned word of mouth since they reach more people. A visitor can see if any of <strong>his many friends or trusted professionals recommend you</strong>, something that is impossible offline."
+		},
+		"benefit10":"You get the ultimate endorsement tool - homeowners' friends.",
+		"feature10": {
+			"p1": "Recommendations from friends is still the most trusted source of information for hiring decisions. The problem is that no one knows which one of his friends had work done and knows a good professional. You get a tool that amplifies word of mouth. ", 
+			"p2": "<strong>When users search for a professional, if you worked for one of their friends and they recommend you or if you have mutual friends, our tools will recommend you as one of the top choices.</strong>",
+			"p3": "To get the most from this tool, you can connect your accounts on Hefest and Facebook. This will not only open a whole new channel of potential customers but also make accessing your account on Hefest even easier.",
+			"p4": "U usporedbi s drugim izvorima, izglednije je da ćeš iz upita korisnika koji te nađu preko prijatelja ili susjeda na kraju dobiti odlične klijente."
+		},
+		"testimonialsheadline2": "These companies build their brand on Hefest and have already increased their revenue by investing in client testimonials",
+		"testimonial4.headline": "<strong>&ldquo; Hefest + Facebook = new client. &rdquo;</strong>",
+		"testimonial4": "&ldquo; A client saw that we have a mutual Facebook friend and contacted me. We made a deal over beers the same day. &rdquo;",
+		"client4": "<strong>Vid Vučak</strong><br>Independent sculptor",
+		"testimonial5.headline": "<strong>&ldquo; Great review system &rdquo;</strong>",
+		"testimonial5": "&ldquo; Since joining Hefest, after I complete a project I always ask the client for a review and a picture. &rdquo;",   		
+		"client5": "<strong>Ozren Rapa</strong><br>Foreman, <a>Fiumens d.o.o</a>",
+		"testimonial6.headline": "<strong>&ldquo; 15 leads from endorsements &rdquo;</strong>",
+		"testimonial6": "&ldquo; We get 15 leads a month from people who say they contacted us because of all of the endorsements we have. &rdquo;",
+		"client6":	"<strong>Ivan Smolčić</strong><br>Executive director, <a>Spetra d.o.o</a>",
+		"ourhelpheadline": "Your business gets our technology and web skills",
+		"ourhelpsubheadline": "Every time you get a new job and the client a great service, we all win.",
+		"benefit11":"Maintenance is hassle free for you, it's all on us",
+		"feature11": {
+			"p1": "Hefest runs on our secure servers in the cloud so you don't need to do anything technical. It has a reliability rate of 99,996% so you can be sure that you'll be visible to potential clients 365 days a year. All you need to use Hefest is a web browser or a smart phone."
+		},
+		"benefit12":"The value of your profile only grows over time",
+		"feature12": {
+			"p1": "By following the latest trends in web development and working on Hefest's user experience, we grow the results you get from your profile. We love our work and invest in skills and tools to make your business more successful.", 
+			"p2": "You don't have to worry about things like SEO, conversion optimization, copywriting, analytics and web technologies. You simply work on your craft and perofrm high quality work. It's our job to show it to the world.  " 
+		},
+		"benefit13":"Always at your service - 24 hours a day",
+		"feature13": {
+			"p1": "You can contact us at any time for all technical issues and help with your profile. We'll find a solution as soon as possible. We're also open to your suggestions about how to improve the service.",
+			"p2": "A friendly and fair relationship with people is the foundation of our business. We treat our clients as we would like to be treated and we try that everything we do is in their best interest." 
+		},
+		"alerts": {
+			"headline":"Get notified about new work in your service area - for free",
+			"details":"You get only quality leads that fit your criteria. We save your time by verifying each service request and connecting you only with serious prospects. It's up to you whether you'll find the job interesting and send an offer. <strong>Unlike many other services, we don't charge for leads</strong> so you can be sure that you won't be getting old, spammy and unverified ones that waste your time, or those that are sent to hundreds of other companies.",
+			"user":"A user requests a proposal for one or more services",
+			"filter": "We verify the request and take only serious ones into account",      
+			"alert":"We send a notification to 5 companies that are best matches"
+		},
+		"valuebuildupheadline": "You get a set of tools for a fraction of the price of individual services",
+		"valuebuildupsubheadline": "Join 500+ companies that use Hefest to grow their business online",
+		"pricing": {
+		    "whatyouget": "What you get", 
+		    "professional": "Professional",
+		    "target": "For contractors, small and medium sized companies",
+		    "monthlyprice": "€29",
+		    "cents": "99",
+		    "month": "/month",			   
+		    "yearlyprice": "€299/year",
+		    "yearlypayment": "(15% popusta za svaki mjesec. Godišnje plaćanje.)",
+			"profile": "Profesionally designed pages",
+			"data": "Details about you, your services and location",
+			"seo": "Search engine optimization",
+			"search": "You'll appear in results of Hefest's search tools",
+			"copy": "Help with writing content that generates leads",
+			"work": "Unlimited number of past work",
+			"testimonials" : "Unlimited number of client testimonials",
+			"endorsements" : "Receiving and giving endorsements",
+			"facebook": "Connecting your account with Facebook",
+			"alerts": "Unlimited number of requests for proposals",
+			"support": "24/7 customer support"
+		},
+		"faq": {
+			"heading": "Frequently asked questions",
+			"freetrial": "How does the trial period work?",
+			"freetrial.answer": "Our 90 days trial period is 100% free and doesn't require a credit card. If at the end of the trial period you wish to upgrade your account and continue using our service, great. If not, you can delete your account or just deactivate it if you wish to return at a later time and have your data saved.",
+			"payment": "What forms of payment do you accept?",
+			"payment.answer": "We accept MasterCard, Visa, American Express, Diners and paying through Paypal. We remind you that you don't need a credit card to start your trial period.",
+			"commitment": "Is there any commitment or contract involed?",
+			"commitment.answer": "Hefest is a service that has a monthly subscription. There is no contract or a long term commitment. You pay on a monthly basis and if you deactivate your account you will be not be billed again. If you don't want to be billed every month, you can buy a yearly subscription at discounted price.",
+			"reliability": "How reliable is your service?",
+			"reliability.answer": "Hefest keeps your pages and data on secure servers in the cloud. We make backups of all of your data every night."		  
+		},
+		"trust": "Hefest is trusted by these and many other companies",
+		"urgency": {
+			"heading": "Request access now and get this low price for a lifetime - be immune to future price increases.",
+			"detail": "Hefest's tools will bring your business to a whole new level and give you an edge over the competition. You'll achieve tangible and repeatable results without having to pay for expensive designers, developers, copywriters, SEO agencies or others. Your business grows together with Hefest's brand and you profit from our network and constant investments in quality of service.",
+			"comparison": "For most, the monthy subscription fee will <strong>pay off after one or two projects.</strong>",
+			"promise": "We relentlessly work on improving our existing tools and the exposure of our clients. If you join now, we promise that your <strong>subscription fee for all the tools you initially received will not grow</strong>, even if the price doubles in the meantime."  
+   		},
+   		"disclaimer": "DISCLAIMER: The testimonials and names of people and companies are purely fictional and serve as placeholders for demonstration purposes."
+    },
+    "professionals": {
+    	"categories":"Professions/Services",
+    	"about": "About the company",
+    	"services": "Services",
+    	"noresults": "We didn't find any",
+    	"professionals": "professionals",
+    	"withserviceavailable": "with service available in",
+    	"projects": "projects",
+    	"reviews": "reviews",
+    	"morereviews":"more reviews",
+    	"endorsements": "endorsements!",
+    	"orderby": {
+    		"employees": "Employees",
+    		"yearsinbusiness": "Years in business",
+    		"hefestscore": "Hefest score",
+    		"endorsements": "Endorsements",
+    		"reviews": "Reviews",
+    		"projects": "Projects"
+    	},
+    	"hefestscore": "Hefest score. Click for details.",
+    	"locatedin": "Located in:",
+    	"locatedin.placeholder": "Search by county, city, village...",
+    	"acceptscreditcards": "Accepts credit cards",
+    	"requestoffer": "Request a free quote"
+    },
+     "projects": {
+    	
+    },
+    "hefestScore": {
+    	"title": "Hefest's score",
+    	"headline": "Hefest's score helps you see how professionals rank when multiple important factors that demonstrate their credibility and quality are taken together. <br><br> The following adds to it, with different weights:",
+   		"endorsements": "Number of people that recommend them",
+   		"reviews": "Amount of testimonials from customers",
+   		"projects": "Uploaded projects with details",
+   		"yearsinbusiness": "Years in business",
+   		"photos": "Uploaded project photos" 
+    },
+    "servicerequest": {
+    	"headline": "Opiši posao i dobij ponude od kvalitetnih majstora",
+    	"messages": {
+    		"success":"",
+    		"locality": "Unesi jedno od mjesta u Hrvatskoj."
+    		
+    	},
+    	"selectservice": "Koje usluge trebaš?",
+    	"addservices": "Dodaj usluge u listu ispod. Obavijest o poslu bit će poslana majstorima i poduzećima koji nude sve odabrane usluge.",
+    	"selectedservices": "Odabrane usluge",
+    	"add": "Dodaj uslugu",
+    	"chooseprofession": "Čija je usluga?",
+    	"chooseservice": "Odaberi uslugu",
+    	"locality": "U kojem mjestu je treba izvesti?",
+    	"locality.placeholder": "Upiši selo, grad, kvart...",
+    	"addservice": "Dodaj uslugu",
+    	"budget": "Koliki ti je budžet?",
+    	"maxprice": "Maksimalni trošak",
+    	"material": "Treba li ponuda uključivati i materijal?",
+    	"ownmaterial": "Ne - sam ću ga nabaviti",
+    	"dates": "Mora li posao početi ili završiti do nekog datuma? Ako ne, polje ostavi praznim.",
+    	"startdate": "Rok za početak posla",
+    	"enddate": "Rok za završetak posla",
+    	"description": "Opiši posao.", 
+    	"description.placeholder": "Navedi detalje o poslu koje smatraš bitnim. Što bolje opišeš posao, veća je šansa da će ti se majstori javiti i da ćeš dobiti kvalitetnije ponude."
+    	
+    },
+    "servicerequests": {
+    	"headline": "Poslovi",
+		"new": "Dobij ponude"
+    },
+    "main": {
+        "title": "Welcome, Java Hipster!",
+        "subtitle": "This is your homepage",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": "If you have any question on JHipster:",
+        "link": {
+            "homepage": "JHipster homepage",
+            "stackoverflow": "JHipster on Stack Overflow",
+            "bugtracker": "JHipster bug tracker",
+            "contact": "contact @java_hipster on Twitter"
+        },
+        "like": "If you like JHipster, don't forget to give us a star on",
+        "github": "Github"
+    },
+    "activate": {
+        "title": "Activation",
+       	"messages": {
+            "success": "Thank you! Your e-mail address has been successfully validated.",
+            "error": "<strong>Your e-mail address could not be validated.</strong> Try to register."
+        }
+    },
+    "register": {
+        "title": "Registration",
+        "form": {
+            "button": "Register"
+        },
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "Your login is required.",
+                    "minlength": "Your login is required to be at least 1 character",
+                    "maxlength": "Your login cannot be longer than 50 characters"
+                }
+            },
+            "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
+            "error": {
+                "fail": "<strong>Registration failed!</strong> Please try again later.",
+                "userexists": "<strong>Login name already registered!</strong> Please choose another one."
+            }
+        }
+    },
+    "login": {
+        "title": "Authentication",
+        "form": {
+            "password": "Password",
+            "password.placeholder": "Your password",
+            "rememberme": "Automatic Login",
+            "button": "Authenticate"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Authentication failed!</strong> Please check your credentials and try again."
+            }
+        }
+    },
+    "settings": {
+        "title": "User settings for [<b>{{username}}</b>]",
+        "form": {
+            "firstname": "First Name",
+            "firstname.placeholder": "Your first name",
+            "lastname": "Last Name",
+            "lastname.placeholder": "Your last name",
+            "button": "Save"
+        },
+        "messages": {
+            "error": "<strong>An error has occured!</strong> Settings could not be saved.",
+            "success": "<strong>Settings saved!</strong>",
+            "validate": {
+                "firstname": {
+                    "required": "Your first name is required.",
+                    "minlength": "Your first name is required to be at least 1 character",
+                    "maxlength": "Your first name cannot be longer than 50 characters"
+                },
+                "lastname": {
+                    "required": "Your last name is required.",
+                    "minlength": "Your last name is required to be at least 1 character",
+                    "maxlength": "Your last name cannot be longer than 50 characters"
+                }
+            }
+        }
+    },
+    "changepassword": {
+        "action": "Change password",
+        "messages": {
+            "error":  "<i class='glyphicon glyphicon-warning-sign'></i><strong>Dogodila se greška prilikom obrade zahtjeva!</strong> Lozinka nije mogla biti promijenjena. Provjerite je li stara lozinka ispravna i pokušajte opet.",
+            "success": "<i class='glyphicon glyphicon-saved'></i><strong>Vaša lozinka je uspješno promijenjena!</strong>"
+        }
+    },
+    "sessions": {
+        "title": "Active sessions for [<b>{{username}}</b>]",
+        "table": {
+            "ipaddress": "IP address",
+            "useragent": "User Agent",
+            "date": "Date",
+            "button": "Invalidate"
+        },
+        "messages": {
+            "success": "<strong>Session invalidated!</strong>",
+            "error": "<strong>An error has occured!</strong> The session could not be invalidated."
+        }
+    },
+    "tracker": {
+        "title": "Real-time user activities",
+        "table": {
+            "userlogin": "User",
+            "ipaddress": "IP Address",
+            "userAgent": "User agent",
+            "page": "Current page",
+            "time": "Time"
+        }
+    },
+    "metrics": {
+        "title": "Application Metrics",
+        "refresh.button": "Refresh",
+        "health": {
+            "title": "Heath checks",
+            "database": "Database: ",
+            "email": "Email: ",
+            "stacktrace": "Stacktrace"
+        },
+        "jvm": {
+            "title": "JVM Metrics",
+            "memory": {
+                "title": "Memory",
+                "total": "Total Memory",
+                "heap": "Heap Memory",
+                "nonheap": "Non-Heap Memory"
+            },
+            "threads": {
+                "title": "Threads",
+                "all": "All",
+                "runnable": "Runnable",
+                "timedwaiting": "Timed waiting",
+                "waiting": "Waiting",
+                "blocked": "Blocked",
+                "dump": {
+                    "title": "Threads dump",
+                    "id": "Id: ",
+                    "blockedtime": "Blocked Time",
+                    "blockedcount": "Blocked Count",
+                    "waitedtime": "Waited Time",
+                    "waitedcount": "Waited Count",
+                    "lockname": "Lock name",
+                    "stacktrace": "Stacktrace",
+                    "show": "Show",
+                    "hide": "Hide"
+                }
+            },
+            "gc": {
+                "title": "Garbage collections",
+                "marksweepcount": "Mark Sweep count",
+                "marksweeptime": "Mark Sweep time",
+                "scavengecount": "Scavenge count",
+                "scavengetime": "Scavenge time"
+            },
+            "http": {
+                "title": "HTTP requests (events per second)",
+                "active": "Active requests:",
+                "total": "Total requests:",
+                "table": {
+                    "code": "Code",
+                    "count": "Count",
+                    "mean": "Mean",
+                    "average": "Average"
+                },
+                "code": {
+                    "ok": "Ok",
+                    "notfound": "Not found",
+                    "servererror": "Server Error"
+                }
+            }
+        },
+        "servicesstats": {
+            "title": "Services statistics (time in millisecond)",
+            "table": {
+                "name": "Service name",
+                "count": "Count",
+                "mean": "Mean",
+                "min": "Min",
+                "max": "Max",
+                "p50": "p50",
+                "p75": "p75",
+                "p95": "p95",
+                "p99": "p99"
+            }
+        },
+        "ehcache": {
+            "title": "Ehcache statistics",
+            "cachename": "Cache name",
+            "objects": "Objects",
+            "hits": "Hits",
+            "misses": "Misses",
+            "evictioncount": "Eviction count",
+            "mean": "Mean get time (ms)"
+        }
+    },
+    "logs": {
+        "title": "Logs",
+        "nbloggers": "There are {{ total }} loggers.",
+        "filter": "Filter",
+        "table": {
+            "name": "Name",
+            "level": "Level"
+        }
+    },
+    "audits": {
+        "title": "Audits",
+        "filter": {
+            "title": "Filter per date",
+            "from": "from",
+            "to": "to",
+            "button": {
+                "weeks": "Weeks",
+                "today": "today",
+                "clear": "clear",
+                "close": "close"
+            }
+        },
+        "table": {
+            "header": {
+                "principal": "User",
+                "date": "Date",
+                "status": "State",
+                "data": "Extra data"
+            },
+            "data": {
+                "remoteAddress": "Remote Address:"
+            }
+        }
+
+    },
+    "errors": {
+        "title": "Error page!",
+        "403": "You are not authorized to access the page."
+    },
+    "updateProfile": {
+       "menu": {
+       		"seeprofile": "See profile",
+       		"pictures":"Pictures and headline",
+       		"details": "Profile details",
+       		"changepassword": "Change password",
+       		"pastwork": "Past work"
+       },
+       "messages": { 
+            "success": "Changes were successfully saved.",
+            "error": "Your profile could not be changed. Please check your input and try again.",
+            "emailNotActivated": "Your e-mail address hasn't been confirmed and we can't send you a link to reset your password in case it is lost. To confirm your e-mail address, click on the link you got in the welcome message after registering.",
+            "clear": "clear",
+            "close": "close"
+        },
+        "form": {
+            "headline": {
+            	"placeholder": "Description of your business in one sentence. Example: 'Reliable and professional carpenter'..."
+           	},
+           	"subheadline": {
+            	"placeholder": "An additional description that follows the headline: '20 years of experience in creating massive wood kitchens'..."
+           	},
+           	"valueproposition": {
+            	"placeholder1": "Guaranteed delivery on time or money back...",
+            	"placeholder2": "Guarantee of professionalism by our employees...",
+            	"placeholder3": "Free computer design and free delivery..."
+           	},
+           	"description.placeholder": "A description of the most important characteristics of your business",
+	        "contactemail.placeholder": "An e-mail address where people can contact you",
+	        "telephone.placeholder": "Telephone number where people can contact you. Example: 01/6255-000",
+	        "mobile.placeholder": "A mobile phone number for contact. Example: 091/000-0000",
+	        "website.placeholder": "www.mywebpage.hr"
+        },
+        "saveChanges": "Save changes"
+    },
+    "profileImages": {
+    	"headline": "Pictures and profile headlines",
+    	"leadImage":"Lead image",
+    	"profileImage": "Profile image",
+    	"profileHeadline":"Profile headline",
+    	"profileSubHeadline":"Profile sub headline",
+    	"valuepropositions": "Most important value propositions",
+    	"valuepropositions.explanation": "Describe the three most things that make you stand out from the competition. As an example, maybe you offer free consultation with your experts."
+    },
+    "profileDetails": {
+    	"headline": "Details about your business",
+    	"business": "Company details",
+    	"companyName": "Company name",
+    	"ownerName": "Owner name",
+    	"yearEstablished": "Year established",
+    	"description": "Description",
+    	"contactDetails": "Contact details",
+    	"counties":"Counties in your service area",
+    	"yourservices": "Services you offer",
+    	"serviceDescription": "Service description"
+    },
+    "professionalProfile": {
+    	"selectedTestimonials": "What do past customers have to say",
+    	"pastwork": "Past work",
+    	"pastworkFollowUp": "These are some of the projects that the professional has done in the past, with detailed data and pictures.",
+    	"matchingProjects": "There are {{projectCount}} matching projects",
+    	"comments": "comments",
+    	"likes": "people likes it",
+    	"images": "images",
+    	"pastworkCta": "Get your own project done",
+    	"pastworkCtaFollowUp": "If you like what you see and want similar work done for yourself, request a free quote now.",
+    	"endorsements": "See who recommends them",  
+    	"endorsementsFollowUp": "These people and companies choose this professional for their own projects and recommend them to their friends and everyone else.",
+    	"endorsementExplanation": "A person or company can endorse only two professionals for a profession. An endorsement means that they would pick this professional as the first or second choice when they need a service in their profession.",     
+    	"endorseProfessional": "Do you know this professional and use his services?",
+    	"endorseProfessionalCTA": "Recommend them to others",
+    	"endorses": "endorses them for",
+    	"matchingEndorsements": "There are {{endorsementCount}} matching endorsements"
+    },
+    "footer": "This is your footer"
+}

@@ -1,0 +1,15 @@
+<div ng-cloak>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-6">
+            <h1>Greška!</h1>
+
+            <div ng-switch="authenticated" ng-show="errorMessage">
+                <div class="alert alert-danger" ng-switch-when="true">
+                    Niste autorizirani za pristup ovoj stranici.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

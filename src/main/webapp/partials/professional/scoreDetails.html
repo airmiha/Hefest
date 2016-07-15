@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="modal-header modal-header-background">
+	<h4 translate>hefestScore.title</h4>
+</div>
+<div>
+<div class="modal-body">
+	<h5 translate>hefestScore.headline </h5>
+	<span>{{activeRange}}</span>
+	<ul class="list-unstyled scoreFactors well">			       						        
+		<li><i class="fa fa-thumbs-o-up text-info"></i> <strong translate>hefestScore.endorsements</strong>
+			<ul class="list-inline text-success">
+			    <li ng-repeat="i in getWeight(5) track by $index"><i class="fa fa-plus"></i></li>
+			</ul>	
+		</li>	
+		<li><i class="fa fa-comments-o text-info"></i> <strong translate>hefestScore.reviews</strong>
+			<ul class="list-inline text-success">
+			    <li ng-repeat="i in getWeight(3) track by $index"><i class="fa fa-plus"></i></li>
+			</ul>	
+		</li>
+		<li><i class="fa fa-wrench text-info"></i> <strong translate>hefestScore.projects</strong>
+			<ul class="list-inline text-success">
+			    <li ng-repeat="i in getWeight(3) track by $index"><i class="fa fa-plus"></i></li>
+			</ul>	
+		</li>
+		<li><i class="fa fa-suitcase text-info"></i> <strong translate>hefestScore.yearsinbusiness</strong>
+			<ul class="list-inline text-success">
+			    <li ng-repeat="i in getWeight(1) track by $index"><i class="fa fa-plus"></i></li>
+			</ul>	
+		</li>
+		<li><i class="fa fa-photo text-info"></i> <strong translate>hefestScore.photos</strong>
+			<ul class="list-inline text-success">
+			    <li ng-repeat="i in getWeight(1) track by $index"><i class="fa fa-plus"></i></li>
+			</ul>	
+		</li>		       
+     </ul>	
+</div>
+</body>
+</html>

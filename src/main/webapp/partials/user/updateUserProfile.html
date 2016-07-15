@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div class="container-fluid profileArea">
+	<div class="row" style="padding-top: 10px">
+		<div class="col-sm-2 col-sm-offset-2">	
+			<div class="profileImage">
+				<img width="100%" height="100%" style="border-radius:10px" src="{{user.leadImage}}"/>
+				<h4>{{user.name}}</h4>
+				<a href="#">Vidi profil</a>
+			</div>
+			<div class="list-group profileMenu">  
+			   <a class="list-group-item" ui-sref="korisnik.slike" ng-class="{active:isActive('/korisnik/slike')}"><i class="glyphicon glyphicon-picture"></i>  Uredi slike i naslov </a>
+		       <a class="list-group-item" ui-sref="korisnik.podaci" ng-class="{active:isActive('/korisnik/podaci')}"> <i class="glyphicon glyphicon-edit"></i>  Uredi podatke profila</a>		       
+		       <a class="list-group-item" ui-sref="korisnik.lozinka" ng-class="{active:isActive('/korisnik/lozinka')}">  <i class="glyphicon glyphicon-lock"></i>  Promijeni lozinku</a>
+		       <a class="list-group-item" ui-sref="korisnik.poslovi" ng-class="{active:isActive('/korisnik/poslovi')}">  <i class="glyphicon glyphicon-wrench"></i>  Moji poslovi</a>
+			</div>			
+		</div>
+		<div class="col-sm-6 profileSection">
+			<div class="alert alert-warning" ng-show="user && !user.active" translate="updateProfile.messages.emailNotActivated">
+        		<strong><i class="glyphicon glyphicon-warning"></i> Your email hasn't been validated</strong>
+     		</div>
+     		<div ui-view></div>	
+		</div>
+	</div>
+</div>
+</html>

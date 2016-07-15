@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="prohomepage" style="background: url('img/profile-bg1.jpg') no-repeat fixed center center / cover">
+		<div class="profileImageOverlay">
+			<div class="container">			  	
+			  	<div class="row">
+			    	<div class="col-sm-6">		
+			    		<h1 class="text-white">{{professional.profileHeadline}}</h1>	
+						<h3 class="text-white">{{professional.profileSubHeadline}}</h3>	
+						<div class="text-center">
+							<button class="btn btn-cta btn-lg" ng-click="openRequestForProposal()" translate>professionals.requestoffer</button>
+						</div>
+					</div>	
+					<div class="col-sm-6">
+	<!-- 					<img ng-src="img/mock/{{professional.profileMoneyShot}}" width="300px"> -->
+					</div>						
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar navbar-inverse profileNavbar" role="navigation">  	      		
+        <div class="container-fluid">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".profileCollapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+<!-- 	            <h3 class="brand navbar-brand"> -->
+<!-- 	            <a href="#top"> -->
+<!-- 	            	<img src="img/logo3.jpg" width="30px"> -->
+<!-- 	            	<span> hefest</span>  -->
+<!-- 	            </a></h3> -->
+	        </div>
+            <div class="navbar-collapse collapse profileCollapse">
+              <ul class="nav navbar-nav navbar-right">
+             	  <li><a scroll-to-bookmark="about" translate>professionals.about</a></li>
+<!-- 		          <li><a scroll-to-bookmark="services" translate>professionals.services</a></li> -->
+		          <li><a scroll-to-bookmark="projects"><span translate>professionals.orderby.projects</span> ({{professional.projectCount}})</a></li> 			
+		          <li><a scroll-to-bookmark="endorsements"><span translate>professionals.orderby.endorsements</span> ({{professional.endorsementCount}})</a> </li> 		      
+			      <li><a scroll-to-bookmark="reviews"><span translate>professionals.orderby.reviews</span> ({{professional.reviewCount}})</a></li>			      			      
+			      <li><a scroll-to-bookmark="contact" translate>global.contact</a></li>			     
+              </ul>
+            </div>
+         </div>
+	</div>
+	<div class= container>
+		<div class="section-title">
+			<h2 translate>professionalProfile.selectedTestimonials</h2>
+		</div>
+		<section class="row" >
+			<div class="col-sm-4">
+				<div class="thumbnail"> 
+					<img class="img img-circle" src="img/{{professional.testimonials[0].imagePath}}" width="125px" height="125px"></img>
+					<div class="caption">				
+						<p class="quote">{{professional.testimonials[0].text}}</p>
+						<h4>{{professional.testimonials[0].personName}}</h4>				
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail"> 
+					<img class="img img-circle" src="img/{{professional.testimonials[1].imagePath}}" width="125px" height="125px"></img>
+					<div class="caption">				
+						<p class="quote" translate>{{professional.testimonials[1].text}}</p>
+						<h4>{{professional.testimonials[1].personName}}</h4>				
+					</div>
+				</div>
+			</div>	
+			<div class="col-sm-4">
+				<div class="thumbnail"> 
+					<img class="img img-circle" src="img/{{professional.testimonials[2].imagePath}}" width="125px" height="125px"></img>
+					<div class="caption">				
+						<p class="quote" translate>{{professional.testimonials[2].text}}</p>
+						<h4>{{professional.testimonials[2].personName}}</h4>				
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<section class="bg-highlight" style="padding-bottom: 40px;">
+		<div class="container">
+			<div class="section-title">
+				<h2>{{professional.featuresHeadline}}</h2>
+				<p class="lead">{{professional.featuresSubHeadline}}</p>
+			</div>
+			<div class="row">
+				<div ng-repeat="feature in professional.features" class="col-md-4 col-sm-6 feature-wrap">
+					<div class="media">
+					  <a class="pull-left" href="#">
+					    <i class="{{feature.icon}}"></i>
+					  </a>
+					  <div class="media-body">
+					    <h4>{{feature.headline}}</h4>
+						<h5 class="text-muted">{{feature.description}}</h5>
+					  </div>
+					</div>			
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="container">
+		<div class="section-title" scroll-bookmark="about">
+			<h2 translate>professionals.about</h2>
+		</div>
+		<section class="row">
+			<div class="col-sm-4" style="height: 250px">			
+				<carousel interval=-1>
+			      <slide ng-repeat="image in professional.images" active="image.active">
+			        <img ng-src="img/mock/{{image.path}}" style="margin:auto;">
+			        <div class="carousel-caption">
+			          <h6 class="text-white">{{image.description}}</h6>
+			      	</div>
+			      </slide>
+			    </carousel>
+			</div>
+			<div class="col-sm-8">
+				<p>{{professional.description}}</p>		
+			</div>
+			
+		</section>
+	</div>
+	<section class="container">
+		<div class="section-title" scroll-bookmark="projects">
+			<h2 translate>professionalProfile.pastwork</h2>
+			<p class="lead" translate>professionalProfile.pastworkFollowUp<p>
+		</div>
+		<div class="row">
+			<div class="col-sm-2 well">			
+				<dropdown-select options="projectSortOptions" selected="projectsSortedBy" on-select="sortProjectsBy(option)" title="{{'global.orderBy' | translate}}"></dropdown-select>	
+			</div>
+			<div class="col-sm-8">
+				<ul class="list-inline portfolio-filter text-center">
+					<li><a class="btn btn-default" ng-click="filterProjects(null)" ng-class="{active: isProjectFilterActive(undefined)}" translate>global.all</a></li>
+					<li ng-repeat="serviceCategory in serviceCategories">
+						<a class="btn btn-default" ng-click="filterProjects(serviceCategory.itemid)" ng-class="{active: isProjectFilterActive(serviceCategory.itemid)}">{{serviceCategory.name}}</a>
+					</li>					
+				</ul>		
+			</div>
+		</div>	
+		<div class="row" ng-show="!loadingProjects">
+			<div ng-repeat="project in projects" class="col-xs-12 col-sm-4 col-md-3 thumbnail">
+				<a ui-sref="project({projectId: project.projectid, url: project.pageurl})"><h5 class="text-black">{{project.name}}</h5></a>	
+				<div style="position:relative">
+					<img class="img img-responsive" alt="" ng-src="{{project.leadimage}}" style="min-height:160px; height:160px; width:100%">							
+	        		<span class="carousel-caption">
+	        		{{project.imagecount}} <span translate>professionalProfile.images</span>	        			        		
+	        		</span>
+        		</div>
+        		<ul class="list-unstyled list-inline well" style= "padding:0px">
+        			<li><h6><i class="fa fa-money text-success"></i> {{project.cost}} €</h6></li>
+        			<li><h6><i class="fa fa-comments-o text-primary"></i> {{project.commentcount}} <span translate>professionalProfile.comments</span></h6></li>
+        			<li><h6><i class="fa fa-calendar  text-success"></i> {{project.dateperformed}}</h6></li>
+        			<li><h6 class="text-primary"><i class="fa fa-thumbs-o-up text-primary"></i> <strong>{{project.likescount}} </strong><span translate>professionalProfile.likes</span></h6></li>
+        		</ul>
+        	</div>
+        	<div ng-show="loadingProjects" class="loading loading-list row">
+				<img src="img/ajax-loader.gif"/>
+				<span translate>search.fetchingdata</span>
+			</div>	
+		</div>
+		<div class="row text-center" ng-show="!loadingProjects">
+			<p class="lead" translate translate-values="{projectCount: '{{projectResultsTotal}}'}">professionalProfile.matchingProjects</p>
+			<pagination ng-show="numProjectPages > 1 && projects.length>0" class="pagination-sm listPager" total-items="projectResultsTotal" items-per-page="projectParams.limit" num-pages="numProjectPages" ng-model="currentProjectPage" class="pagination-sm" rotate="true" max-size="4" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+		</div>	
+	</section>
+	<div class="container bg-highlight">
+		<div class="section-title" scroll-bookmark="projects">
+			<h2 translate>professionalProfile.pastworkCta</h2>
+			<p class="lead" translate>professionalProfile.pastworkCtaFollowUp<p>
+			<button class="btn btn-cta btn-lg" ng-click="openRequestForProposal()" translate>professionals.requestoffer</button>
+		</div>
+	</div>
+	<section class="container">
+		<div class="section-title" scroll-bookmark="endorsements">
+			<h2 translate>professionalProfile.endorsements</h2>
+			<p class="lead"><span translate>professionalProfile.endorsementsFollowUp</span><i class="fa fa-question-circle text-primary" tooltip="{{'professionalProfile.endorsementExplanation' | translate}}"></i></p>
+			<p class="lead text-danger" translate>professionalProfile.endorseProfessional</p>
+			<button class="btn btn-primary btn-lg" ng-click="endorseProfessional()" translate>professionalProfile.endorseProfessionalCTA</button>
+		</div>
+<!-- 		<div class="row"> -->
+<!-- 			<div class="col-sm-8 col-sm-offset-2"> -->
+<!-- 				<ul class="list-inline portfolio-filter text-center"> -->
+<!-- 					<li><a class="btn btn-default" ng-click="filterEndorsements(undefined)" ng-class="{active: isEndorsementFilterActive(undefined)}" translate>global.all</a></li> -->
+<!-- 					<li><a class="btn btn-default" ng-click="filterEndorsements(ROLE_USER)" ng-class="{active: isEndorsementFilterActive('ROLE_USER')}" translate>global.account.users</a></li> -->
+<!-- 					<li><a class="btn btn-default" ng-click="filterEndorsements(ROLE_PROFESSIONAL)" ng-class="{active: isEndorsementFilterActive('ROLE_PROFESSIONAL')}" translate>global.account.professionals</a></li>										 -->
+<!-- 				</ul>		 -->
+<!-- 			</div> -->
+<!-- 		</div>	 -->
+		<div class="row" ng-show="!loadingEndorsements">
+			<div ng-repeat="endorsement in endorsements" class="col-xs-12 col-sm-4 col-md-3 thumbnail">
+				<a ui-sref="professional({professionalId: endorsement.userid})"><h5 class="text-black">{{endorsement.name}}</h5></a>
+<!-- 				<span translate>professionalProfile.endorses</span> <span>{{endorsement.profession}}</span>				 -->
+				<img class="img img-responsive" alt="" ng-src="{{endorsement.leadimage}}" style="min-height:160px; height:160px; width:100%">							
+        	</div>
+        	<div ng-show="loadingProjects" class="loading loading-list row">
+				<img src="img/ajax-loader.gif"/>
+				<span translate>search.fetchingdata</span>
+			</div>	
+		</div>
+		<div class="row text-center">
+			<p class="lead" translate translate-values="{endorsementCount: '{{endorsementResultsTotal}}'}">professionalProfile.matchingEndorsements</p>
+			<pagination ng-show="numEndorsementPages > 1 && endorsements.length>0" class="pagination-sm listPager" total-items="endorsementResultsTotal" items-per-page="endorsementParams.limit" num-pages="numEndorsementPages" ng-model="currentEndorsementPage" class="pagination-sm" rotate="true" max-size="4" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+		</div>	
+	</section>
+</body>
+</html>

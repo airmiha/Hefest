@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div class="modal-header modal-header-background">
+	<h4 translate>global.account.signin</h4>
+</div>
+<div class="modal-body">
+    <div class="alert alert-danger" ng-show="authenticationError">
+         <strong translate>global.messages.error.signinfailed</strong> {{'global.messages.error.checkusernamepassword' | translate}}
+    </div>
+	<form name="signInForm" ng-submit="signIn(signInForm.$valid)" form-autofill-fix novalidate>
+		<div class="form-group" show-errors>
+			<label>E-mail</label>
+          	<input type="email" name="email" ng-model="user.email" class="form-control" auto-focus required>
+          	<p ng-if="signInForm.email.$error.email" class="help-block" translate>global.messages.error.validemail</p>		          	     	
+		</div>
+		<div class="form-group" show-errors>
+			<label translate>global.form.password</label>
+          	<input type="password" name="password" ng-model="user.password" class="form-control">		          	     	
+		</div>
+		<div class="form-group">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="user.rememberMe" ng-init="user.rememberMe=true" translate>
+              	 {{'global.account.rememberme' | translate }}
+                 <a ng-click="forgotPassword()" class="pull-right"><small translate>
+                global.account.forgotpassword</small></a> 
+            </label>
+           
+        </div>
+		<button type="submit" class="btn btn-success" style="width:100%" translate>global.account.signin </button>
+	</form>
+</div>
+<div class="modal-footer" style="text-align:center">
+	<span>{{'global.account.noaccount' | translate}} <a ng-click="openSignUp()" translate> global.account.register</a></span>
+</div>
+</html>

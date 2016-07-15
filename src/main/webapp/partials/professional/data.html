@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3 translate>profileDetails.headline</h3>
+	<div class="alert alert-success" ng-show="successProfile" scroll-bookmark>
+        <strong> <i class="glyphicon glyphicon-saved"></i><span translate>updateProfile.messages.success</span></strong>
+     </div>
+     <div class="alert alert-danger" ng-show="error">
+         <strong><i class="glyphicon glyphicon-warning-sign"></i><span translate>updateProfile.messages.error</span></strong>
+    </div>
+	<form name="updateProfessionalProfileForm" ng-submit="updateProfessionalProfile(updateProfessionalProfileForm.$valid)" novalidate>
+		<accordion close-others="false"> 
+			<accordion-group is-open="isBusinessSectionOpen" ng-init="isBusinessSectionOpen=true">
+		        <accordion-heading>
+		            <strong><i class="glyphicon glyphicon-briefcase"></i> <span translate>profileDetails.business</span></strong><i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isBusinessSectionOpen, 'glyphicon-chevron-right': !isBusinessSectionOpen}"></i>
+		        </accordion-heading> 	 
+		        <div class="form-group" show-errors>
+					<label><span translate>profileDetails.companyName</span> (<em translate>global.form.mandatory</em>)</label>
+		          	<input type="text" name="professionalName" class="form-control" ng-model="professional.name" required auto-focus>
+		          	<p ng-show="updateProfessionalProfileForm.professionalName.$invalid && !updateProfessionalProfileForm.professionalName.$pristine" class="help-block" translate>profileDetails.validate.companyName</p>		          	     
+				</div>
+				<div class="form-group">
+					<label translate>profileDetails.ownerName</label>
+		          	<input type="text" class="form-control" ng-model="professional.ownerName">		          	     
+				</div>
+<!-- 				<div class="form-group"> -->
+<!-- 					<label translate>profileDetails.yearEstablished</label> -->
+<!-- 					<select class="form-control" ng-model="professional.yearEstablished" ng-options="year for year in yearsOfEstablishment"></select>	          	      -->
+<!-- 				</div>				 -->
+				<div class="form-group">
+					<label translate>profileDetails.description</label>
+					<textarea class="form-control" ng-model="professional.description"></textarea>	          	     
+				</div>			
+		    </accordion-group> 
+		    <accordion-group is-open="isContactSectionOpen" ng-init="isContactSectionOpen=true">
+		        <accordion-heading>
+		            <strong><i class="glyphicon glyphicon-earphone"></i> <span translate>profileDetails.contactDetails</span></strong> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isContactSectionOpen, 'glyphicon-chevron-right': !isContactSectionOpen}"></i>
+		        </accordion-heading>  
+		        <div class="form-group">
+					<label translate>global.form.address</label>
+		          	<input type="text" class="form-control" ng-model="professional.addressLine">		          	     
+				</div> 
+				<div class="form-group">
+					<label translate>global.form.contactemail</label>
+		          	<input type="email" name="email" class="form-control" ng-model="professional.contactEmail" placeholder="{{'updateProfile.form.contactemail.placeholder' | translate}}" ng-maxlength=255>		          	     
+			        <p ng-if="updateProfessionalProfileForm.email.$error.email || professionalSignupForm.email.$error.required" class="help-block" translate>global.messages.error.validemail</p>
+          			<p ng-if="updateProfessionalProfileForm.email.$error.maxlength" class="help-block" translate>global.messages.error.emailtoolong</p>		          	     	
+				</div>	
+				<div class="form-group">
+					<label translate>global.form.telephone</label>
+		          	<input type="text" class="form-control" ng-model="professional.telephone" placeholder="{{'updateProfile.form.telephone.placeholder' | translate}}">		          	     
+				</div>
+				<div class="form-group">
+					<label translate>global.form.mobile</label>
+		          	<input type="text" class="form-control" ng-model="professional.mobile" placeholder="{{'updateProfile.form.mobile.placeholder' | translate}}">		          	     
+				</div>
+				<div class="form-group">
+					<label translate>global.form.fax</label>
+		          	<input type="text" class="form-control" ng-model="professional.fax" >		          	     
+				</div>	 
+				<div class="form-group">
+					<label translate>global.form.website</label>
+		          	<input type="text" class="form-control" ng-model="professional.website" placeholder="{{'updateProfile.form.website.placeholder' | translate}}">		          	     
+				</div>	    
+		    </accordion-group> 
+			<accordion-group is-open="isCountySectionOpen" ng-init="isCountySectionOpen=true">
+		        <accordion-heading>
+		           <strong><i class="glyphicon glyphicon-globe"></i> <span translate>profileDetails.counties</strong> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isCountySectionOpen, 'glyphicon-chevron-right': !isCountySectionOpen}"></i>
+		        </accordion-heading>  
+		       <checkbox-multi-select options="counties" model="professional.counties"></checkbox-multi-select>  		    
+		    </accordion-group>
+		    <accordion-group is-open="isServiceSectionOpen" ng-init="isServiceSectionOpen=true">
+		        <accordion-heading>
+		           <strong><i class="glyphicon glyphicon-gift"></i> <span translate>profileDetails.yourservices</strong></strong> <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isServicesSectionOpen, 'glyphicon-chevron-right': !isServicesSectionOpen}"></i>
+		        </accordion-heading> 
+		        <ul class="list-unstyled">
+			        <li ng-repeat="(id, profession) in professions">
+			        	<br>
+			        	<i ng-click="initializeProfession(profession, id); profession.expanded = !profession.expanded" ng-class="{'glyphicon glyphicon-minus': profession.expanded, 'glyphicon glyphicon-plus': !profession.expanded}"></i>
+			        	<span ng-style="profession.color"><strong>{{profession.name}}</strong></span>
+			        	<div ng-show="profession.expanded">
+			        		<br>
+			        		<button type="button" class="btn-link btn-small" ng-click="checkAllServiceCategories(profession)"><span class="glyphicon glyphicon-ok"></span> <span translate>global.multiselect.selectall</span></button>
+						    <button type="button"  class="btn-link btn-small" ng-click="uncheckAllServiceCategories(profession)"><span class="glyphicon glyphicon-remove"></span> <span translate>global.multiselect.unselectall</span></button>
+						    <div ng-repeat="(id, serviceCategory) in profession.serviceCategories">
+							    <label  class="checkbox">
+							    	<input ng-model="serviceCategory.checked" type="checkbox">{{serviceCategory.name}}							    									 		
+							    </label>
+							    <div ng-show="serviceCategory.checked">
+								    <label translate>profileDetails.serviceDescription</label>							    
+								 	<textarea ng-model="serviceCategory.description" rows="2" style="width:100%"></textarea>
+							 	</div>
+						 	</div>
+			        	</div>
+			        </li>
+		        </ul> 		  		    
+		    </accordion-group>				
+		 </accordion>	
+		 <div class="form-group" style="text-align: right">	
+		 	<button type="submit" style="margin-top: 10px" class="btn btn-primary btn-lg" scroll-to-bookmark><i class="glyphicon glyphicon-save"></i><span translate>updateProfile.saveChanges</span></button>	
+		</div>
+	</form>
+</body>
+</html>

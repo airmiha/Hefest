@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div ng-controller="ServicesFilterController">
+	<div style="padding-left: 10px">
+		<a style="display:block" ng-show="level >0" ng-click="selectAllProfessions(true)" translate>&lt {{'search.allprofessions' | translate}}</a>	
+		<a style="display:block" ng-show="level >1" ng-click="selectItem(selectedProfession, true)">&lt {{selectedProfession.name}}</a>	
+    </div>
+    <span style="display:block; padding-left: 20px"><strong>{{selectedItem.name != '' ? selectedItem.name : ('search.allprofessions' | translate)}}</strong></span>
+    <div class="listItems" ng-hide="loadingItems">
+	    <ul class="list-unstyled">  
+	       <li ng-repeat="item in items">
+	       	<a style="display:block; margin-bottom:2px" ng-click="selectTreeItem(item)">{{item.name}}</a>
+	       </li>
+		</ul>
+	</div> 
+	<div ng-show="loadingItems" class="loading loading-list">
+		<img src="img/ajax-loader.gif"/>
+		<span translate>search.fetchingdata</span>
+	</div>
+</div>
+</html>

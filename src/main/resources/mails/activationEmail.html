@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{activation.title}">Hefest aktivacija</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p th:text="#{activation.greeting(${user.name})}"></p>
+        <p th:text="#{activation.text1}">
+           Vaš Hefest račun je uspješno registriran. Molimo vas kliknite na link ispod da ga aktivirate:
+        </p>
+        <p>
+            <a th:href="@{|${baseUrl}/app/#/aktivacija?key=${user.activationKey}|}">Aktiviraj svoj račun</a>
+        </p>
+        <p>
+            <span th:text="#{activation.text2}">Srdačan pozdrav, </span>
+            <br/>
+            <br/>
+            <em th:text="#{email.signature}">Hefest.</em>
+        </p>
+    </body>
+</html>

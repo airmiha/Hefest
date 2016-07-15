@@ -1,0 +1,18 @@
+<p class="text-primary" style="margin-bottom: 5px;">
+	<small>{{title}}</small>
+</p>
+<div class="input-group" ng-style="{'width': width}">
+	<input class="{{controlName}} inputText form-control" type="text" ng-model="selectedRange" ng-model="symbol"
+		placeholder="{{title + ' (' + symbol + ')'}}">
+	<div class="input-group-btn">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu input-select pull-right" ng-style="{'width': width}">
+			<div range-slider style="margin-left: 10px; margin-right: 10px;" min="minRange" max="maxRange"
+				model-min="userMinValue" model-max="userMaxValue" filter="{{type}}" filter-options="{{symbol}}" step="{{rangeStep}}"></div>
+			<li><a ng-click="setRange('')">Sve</a></li>
+			<li ng-repeat="option in selectOptions"><a ng-click="setRange(option)">{{option}}</a></li>
+		</ul>
+	</div>
+</div>

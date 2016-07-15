@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div class="container-fluid search" style="padding: 0px">
+	<div class="row searchrow">
+		<div class="col-sm-2" style="height:40px">		
+			<a class="heading-item-tree" ng-click="isItemTreeVisible = !isItemTreeVisible"><strong translate>professionals.categories </strong><span class="caret"></span></a>			
+		</div>
+		<div class="col-sm-3">		
+			<span class="glyphicon glyphicon-user typeaheadicon"></span>
+			<input type="text" ng-model="selectedSearchItem" placeholder="{{'search.professional.placeholder' | translate}}"
+				typeahead="item as item.name for item in getItems($viewValue) | filter:{name: $viewValue}" typeahead-loading="{{'search.looking' | translate}}"
+				class="form-control typeaheadinput" typeahead-editable=true typeahead-wait-ms=100 ng-enter="getProfessionals()" auto-focus/>
+		</div>
+		<div class="col-sm-3">
+			<span class="glyphicon glyphicon-map-marker typeaheadicon"></span>
+			<input type="text" ng-model="selectedMunicipality" placeholder="{{'search.servicearea.placeholder' | translate}}"
+				typeahead="municipality as municipality.path for municipality in getMunicipalities($viewValue) | filter:$viewValue" typeahead-loading="{{'search.looking' | translate}}"
+				class="form-control typeaheadinput" typeahead-editable=true typeahead-wait-ms=100 ng-enter="getProfessionals()"/>
+		</div>
+		<div class="col-sm-1">
+			<button class="btn btn-primary" ng-click="isFilterOpen=!isFilterOpen"><span class="glyphicon glyphicon-filter"></span><strong translate>search.filters</strong> <span class="caret"></span></button>		
+		</div>
+		<div class="col-sm-1">
+			<button class="btn btn-danger btn-search" ng-click="getProfessionals()"><span class="glyphicon glyphicon-search"></span> <strong translate>global.search</strong></button>		
+		</div>
+	</div>
+	<div class="row" style="margin: -10px 0 0">
+		<div class="col-sm-7 col-sm-offset-2" ng-class="{'open': isFilterOpen}">
+			<div class="dropdown-menu advancedFilter container">
+				<div class="row">
+					<div class="col-sm-5 form-group">
+						<label translate>professionals.locatedin</label>
+						<div class="inner-addon left-addon">
+							<i class="glyphicon glyphicon-home"></i>
+							<input type="text" ng-model="filters.location" placeholder="{{'professionals.locatedin.placeholder' | translate}}"
+							typeahead="item as item.name for item in getMunicipalities($viewValue) | filter:{name: $viewValue}" typeahead-loading="{{'search.looking' | translate}}"
+							class="form-control" typeahead-editable=true typeahead-wait-ms=100 ng-enter="getProfessionals()" class="form-control" disabled/>
+						</div>
+					</div>
+					<div class="col-sm-2 col-sm-offset-1">
+						<label class="filterTitle" translate>professionals.orderby.yearsinbusiness</label>
+						<div class="btn-group" dropdown style="width:90px">	
+						    <button type="button" class="btn btn-default dropdown-toggle button-sort">
+								<small>{{filters.minYearsinBusiness.label}}
+						       <span class="caret dropdown-caret"></span></small>
+						    </button>
+						    <ul class="dropdown-menu" role="menu" style="width:90px; min-width: 0px">
+						      <li ng-repeat="filter in yearsinBusinessFilter">
+						      	<a ng-click="filters.minYearsinBusiness = filter"><small>{{filter.label}}</small></a>
+						      </li>
+						    </ul>
+						</div>		
+					</div>
+					<div class="col-sm-2">
+						<label class="filterTitle" translate>professionals.orderby.employees</label>
+						<div class="btn-group" dropdown style="width:90px">	
+						    <button type="button" class="btn btn-default dropdown-toggle button-sort">
+								<small>{{filters.minEmployees.label}}
+						       <span class="caret dropdown-caret"></span></small>
+						    </button>
+						    <ul class="dropdown-menu" role="menu" style="width:90px; min-width: 0px">
+						      <li ng-repeat="filter in employeeFilter">
+						      	<a ng-click="filters.minEmployees = filter"><small>{{filter.label}}</small></a>
+						      </li>
+						    </ul>
+						</div>		
+					</div>
+					<div class="col-sm-2">
+						<div class="checkbox">
+						  <label>
+						    <input type="checkbox" ng-model="filters.acceptscreditcards" ng-false-value="">
+						    <small>{{'professionals.acceptscreditcards' | translate }}</small>
+						  </label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-7">
+						<form class="form-inline">
+						 <label translate>global.inrange</label>
+						 <div class="btn-group" dropdown >	
+						    <button type="button" class="btn btn-default dropdown-toggle button-sort" style="width: 75px">						    	
+						    	<small>{{filters.distance.label}}</small>
+						       <span class="caret dropdown-caret"></span>
+						    </button>
+						    <ul class="dropdown-menu" role="menu" style="width: 75px; min-width:0px">
+						      <li ng-repeat="distance in distances">
+					      		<a ng-click="filters.distance = distance"><small>{{distance.label}}</small></a>
+						      </li>
+						    </ul>
+						</div>
+						<div class="form-group distanceFilterTypeahead">		
+						<label translate>global.from</label>
+						  <input type="text" ng-model="filters.centerPoint" placeholder="{{'global.center.placeholder' | translate}}"
+							typeahead="item as item.name for item in getMunicipalities($viewValue) | filter:{name: $viewValue}" typeahead-loading="{{'search.looking' | translate}}"
+							class="form-control" typeahead-editable=true typeahead-wait-ms=100 ng-enter="getProfessionals()" style="width:250px" disabled/>					
+						</div>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-1 col-sm-offset-9">
+						<button class="btn btn-default btn-sm" ng-click="resetFilters()"  style="margin-top: 2px"><span class="glyphicon glyphicon-refresh"></span> <strong translate>global.reset</strong></button>		
+					</div>
+					<div class="col-sm-2">
+						<button class="btn btn-primary" ng-click="getProfessionals()"><strong translate>global.applyfilters</strong></button>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainContent">	
+		<div ng-show="isItemTreeVisible" class="itemTree" ng-include src="'partials/servicesFilter.html'"></div>
+		<div id="map" class="{{!isItemTreeVisible && 'mapLeft' || 'mapLeftOffset' }} {{isListHidden && 'mapRight' || 'mapRightOffset' }}" ol-map  update-size="isListHidden" zoom="zoom" extent="extent" center="center" on-move-end="getProfessionalsForMap()" on-hover="onHover(event)" selected-feature="selectedFeature" map-control="mapControl">
+			<div class="alert alert-success alert-summary" role="alert"  ng-show= "!summaryClosed">
+				<button type="button" class="close" ng-click="summaryClosed=true"><span aria-hidden="true">&times;</span><span class="sr-only" translate>global.close</span></button>									
+				<span style="margin-right:15px" ng-show="!loadingMapData && results.total > -1">{{results.total > 0 ? ('search.wefound' | translate) : ('professionals.noresults' | translate)}}
+				<strong> {{ results.total !=0 ? results.total : ""}}</strong> {{'professionals.professionals' | translate }}
+				{{ params.itemid || params.tags ? ('global.for' | translate) + " '" + params.itemname + "'" : ""}}
+				{{ params.countyid || params.municipality ? " " + ('professionals.withserviceavailable' | translate) + " '" + params.municipalityname + "'" : ""}}</span>
+				<div ng-show="loadingMapData" class="loading loading-map">
+					<img src="img/ajax-loader.gif"/>
+					<span translate>search.fetchingdata</span>
+				</div>
+			</div>
+			<div class="mapLegend well">
+				<label class="filterTitle" translate>global.showing</label>
+				<div class="btn-group" dropdown style="width:100%">	
+				    <button type="button" class="btn btn-default dropdown-toggle button-sort">
+				    	<i class="fa fa-user"></i><small>
+				    	 {{selectedMetric.label | translate}}
+				       <span class="caret dropdown-caret"></span></small>
+				    </button>
+				    <ul class="dropdown-menu" role="menu" style="width:100%; min-width: 0px">
+				      <li ng-repeat="metric in metrics">
+				      	<a ng-click="onSelectedMetric(metric)"><small>{{metric.label | translate}}</small></a>
+				      </li>
+				    </ul>
+				</div>				
+				<div>
+					<div class="colorscale">
+						<img src="img/colorscale.png"> 
+					</div>
+					<div class="ranges">												
+						<span><small>{{activeRange.top}}</small></span>
+						<span><small>{{activeRange.middle}}</small></span>
+						<span><small>0</small></span>
+					</div>
+				</div>				
+			</div>
+			<ol-layer name="professionals" features="professionals" hover="true" select="true" layer-control="layerControl" label="getLabel(feature)" graphic="getGraphic(feature, isSelect)" image="professional"></ol-layer>
+			<ol-layer name="highlight" features="highlight" label="name" image="professional"></ol-layer>
+		</div>			
+		<button class="buttonToggle {{isListHidden && 'buttonToggleListRight' || 'buttonToggleListRightOffset' }} btn-xs" ng-click="isListHidden = !isListHidden">
+			{{isListHidden ? ('global.show' | translate): ('global.hide' | translate)}} 
+			<i class="glyphicon" ng-class="{'glyphicon glyphicon-hand-left': isListHidden, 'glyphicon glyphicon-hand-right': !isListHidden}"></i>
+		</button>
+		<div ng-show="!isListHidden" class="listContent" ng-include src="'partials/listGrid.html'"></div>
+	</div>	
+</div>
+</html>

@@ -1,0 +1,757 @@
+{
+    "global": {
+        "title": "jhipster",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+        "account": {
+        	"signin": "Prijavi se",
+        	"register": "Registriraj se",
+        	"professionals": "Majstori",
+        	"joinHefest": "Pridruži se Hefestu",
+        	"users": "Korisnici",
+        	"editprofile": "Uredi profil",
+        	"logout": "Odjavi se",
+        	"rememberme": "Zapamti me",
+        	"forgotpassword": "Zaboravio si lozinku?",
+        	"noaccount": "Nemaš račun?",
+        	"alreadyamember": "Već si član?",
+        	"resetpassword": "Resetiraj lozinku"
+        },
+        "form": {
+        	"address": "Adresa",
+        	"yourname": "Tvoje ime",
+        	"companyname": "Ime poduzeća",
+        	"password": "Lozinka",
+        	"oldpassword": "Stara lozinka",
+        	"oldpassword.placeholder": "Vaša postojeća lozinka",
+            "newpassword": "Nova lozinka",
+            "newpassword.placeholder": "Sigurna lozinka-najmanje 6 znakova",
+            "confirmpassword": "Ponovljena lozinka",
+            "resetpassword": "Resetiraj lozinku",
+            "email": "E-mail",
+            "contactemail": "E-mail za kontakt",
+            "contactemail.placeholder": "adresa@mail.com",
+            "telephone": "Telefon",
+           	"mobile": "Mobitel",
+           	"fax": "Faks",
+           	"website":"Web stranica",
+            "contactnumber": "Broj za kontakt",
+            "contactnumber.placeholder": "Telefon ili mobitel na koji ti se majstor/poduzeće može javiti.",
+            "besttimetocontact": "U koje vrijeme te majstor/poduzeće može nazvati?",
+            "besttimetocontact.placeholder": "Ako te davatelj ponude odluči nazvati, koje ti vrijeme najbolje odgovara? Primjerice: 'Radnim danom iza 16 i vikendom'", 
+            "email.placeholder": "Vaša e-mail adresa",
+            "mandatory": "obvezno",
+            "message": "Poruka",
+            "submit": "Pošalji",
+            "sendresetpasswordlink": "Pošalji poveznicu za resetiranje"
+        },
+        "messages": {
+            "info": {
+                "authenticated": "If you want to <a href=\"#/login\">authenticate</a>, you can try the default accounts:<br/>- Admnistrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
+                "register": "You don't have an account yet? <a href=\"#/register\">Register a new account</a>",
+                "passwordreset": "Lozinka je uspješno resetirana! Možete se prijaviti s novom lozinkom.",
+                "resetpasswordlink": "E-mail s poveznicom za resetiranje lozinke je poslan na adresu.",
+                "requestpasswordresetlink": "Unesite e-mail adresu svojeg računa i poslat ćemo vam mail s poveznicom za resetiranje lozinke"
+            },
+            "error": {
+            	"signupfailed": "Registracija nije uspjela!",
+            	"checkdata": "Provjeri podatke i pokušaj opet.",
+            	"alreadyregistered": "Ova e-mail adresa je već registrirana!",
+            	"trytosignin": "Pokušaj se prijaviti.",
+            	"signinfailed": "Prijava nije uspjela!",
+            	"checkusernameandpassword": "Molimo vas provjerite korisničko ime i lozinku i pokušajte opet",
+                "dontmatch" : " Lozinke se ne poklapaju!",
+                "processing": "Dogodila se greška prilikom obrade zahtjeva!",
+                "checkinput": "Provjerite podatke i pokušajte opet.",
+                "validemail": "Unos mora biti validna e-mail adresa.",
+                "emailtoolong": "E-mail adresa mora biti kraća od 256 znakova.",
+                "price": "Cijena mora biti broj veći od nule, npr 1,567 i imati najviše dva decimalna mjesta",
+                "processingrequest": "Dogodila se greška prilikom obrade zahtjeva!",
+                "passwordreset": "Lozinka nije mogla biti resetirana. Zahtjev nije nađen ili je zastario. Pokušajte napraviti novi zahtjev.",
+                "resetpasswordlink": "Dogodila se greška prilikom slanja E-maila na adresu",
+                "tryagain": "Molimo pokušaj opet."
+            },
+            "validate": {
+                "password": {
+                    "required": "Lozinka je obvezna.",
+                    "minlength": "Lozinka mora imati najmanje 6 znakova.",
+                    "maxlength": "Lozinka mora biti kraća od 50 znakova."
+                },
+                "email": {
+                    "required": "E-mail adresa je obvezna.",
+                    "invalid": "Your e-mail is invalid.",
+                    "minlength": "Your e-mail is required to be at least 5 characters",
+                    "maxlength": "Your e-mail cannot be longer than 50 characters"
+                },
+                "companyname": {
+                	"required": "Ime poduzeća je obvezno.",
+                	"maxlength": "Ime poduzeća mora biti kraće od 100 znakova."
+                }
+            }
+        },
+        "or": "ili",
+        "currency": "valuta",
+        "search": "Traži",
+        "professionals": "Majstori",
+        "projects": "Prošli radovi",
+        "forprofessionals": "Za majstore",
+        "owner": "Vlasnik",
+        "show": "Pokaži",
+        "hide": "Sakrij",
+        "close": "Zatvori",
+        "for": "za",
+        "orderBy": "Poredaj po",
+        "showing": "Prikazujem:",
+        "inrange": "U rasponu: ",
+        "from": "od: ",
+        "center.placeholder": "Grad, mjesto, adresa...",
+        "contact": "Kontakt",
+        "all": "Sve",
+        "date":"Datum" 
+    },
+     "orderby": {
+    	"nameasc": "Imenu (A-Z)",
+    	"namedesc": "Imenu (Z-A)",
+    	"dateasc":"Najstarije",
+    	"datedesc":"Najnovije",
+    	"costasc":"Najveća cijena",
+    	"costdesc":"Najmanja cijena",
+    	"images": "Broj slika",
+    	"comments": "Broj komentara",
+    	"likes": "Ljudi kojima se sviđa"
+    },
+    "search": {
+        "allprofessions":"Svi majstori",
+    	"searching": "Tražim...",
+    	"professional.placeholder": "Traži majstora po zanimanju, usluzi, imenu firme...",
+    	"servicearea.placeholder": "Gdje trebaš uslugu? Grad, općina, mjesto...",
+    	"filters": "Filtri",
+    	"wefound": "Našli smo",
+    	"fetchingdata": "Dohvaćam podatke",
+    	"allprofessions": "Sva zanimanja",
+    	"previous": "« Prethodno",
+    	"next": "Sljedeće »",
+    	"backtolist": "Natrag na listu"
+    },
+	"homepage": {
+		"headline": "Nađi kvalitetnog i pouzdanog majstora",
+		"subheadline": "Traži majstora po zanimanju, usluzi ili njegovim prošlim radovima u okolici.",
+		"customer": {
+			"headline": "Obavi posao bez stresa, kašnjenja i skrivenih troškova.",
+			"subheadline": "Imaš loših iskustava s izborom krivog majstora? Nemaš preporuku kojoj vjeruješ? Za razliku od oglasnika, foruma i preporuka na slijepo, nudimo ti dovoljno podataka o majstorima za pametnu odluku.",
+			"benefit1": "Lako pretražuj i uspoređuj majstore",
+			"feature1": "Izaberi pravog pomoću interaktivne karte. Vidi tko je radio kod tvojih prijatelja ili u susjedstvu.",
+			"benefit2": "Bolje planiraj pomoću baze prošlih radova",
+			"feature2": "Pregledaj podatke o prošlim radovima i slike prije i poslije. Saznaj izvođača, cijenu i detalje." ,
+			"benefit3": "Saznaj što drugi misle o majstoru",
+			"feature3": "Pročitaj kritike bivših klijenata. Vidi tko ga sve preporučuje: možda netko od tvojih prijatelja i susjeda.",
+			"benefit4": "Opiši posao i primaj ponude",
+			"feature4": "Ne želiš tražiti? Ostavi opis posla i poslat ćemo obavijest majstorima u okolici koji nude tu uslugu.",   
+			"valuepropositionheadline": "100% Provjereni podaci. Točne slike. Stvarne preporuke.",
+			"valuepropositionsubheadline": "Skupljamo, provjeravamo i organiziramo podatke o majstorima da ti maksimalno olakšamo izbor. Preporučujemo ti majstore na temelju zadovoljstva klijenata, udaljenosti i broja radova u okolici ili kod tvojih prijatelja.",
+			"testimonialsheadline": "Što kažu ljudi kojima smo pomogli da nađu majstora",
+			"testimonial1": "&ldquo; Trebao sam urediti potkrovlje i nisam znao koga angažirati jer nisam imao dobru preporuku. Preko Hefesta sam našao majstora u susjednom mjestu za kojeg uopće nisam znao i koji je već radio u mojoj ulici. &rdquo;",
+			"testimonial2": "&ldquo; Muž i ja smo htjeli kuhinju po mjeri. Nismo znali koga unajmiti, pogotovo zbog veličine investicije. Pregledali smo prošle radove za kuhinje i tako našli odličnog stolara s kojim smo jako zadovoljni. &rdquo;",   		
+			"testimonial3": "&ldquo; Trebao mi je vodoinstalater za renoviranje kupaonice. Čim sam otvorio ekran za pretragu, iskočio mi je majstor koji je radio kolegi s posla koji mi je prijatelj na Facebooku. Predobra stvar. &rdquo;"    		
+		},
+		"professional": {
+			"headline": "Majstor si ili poduzeće u potrazi za više posla?",
+			"subheadline": "Hefest ti pomaže povećati prihode i daje ti kvalitetne upite od ljudi koji na Internetu traže majstora. Bolje i isplativije od plaćenih oglasa na žutim stranicama. Saznaj kako.",
+			"benefit1": "Predstavi se vrhunski izrađenim profilom",
+			"feature1": "Tvoj profil je moderna web stranica izrađena da ti donosi upite cijele godine.",
+			"benefit2": "Izgradi bazu svojih prošlih radova",
+			"feature2": "Pokaži kvalitetu svog rada pred ljudima koji traže slične usluge i daj im razlog da izaberu tebe." ,
+			"benefit3": "Skupljaj kritike bivših klijenata",
+			"feature3": "Preporuke i dobar glas su najveća pomoć u dobivanju posla. Skupljaj ih i pokaži potencijalnim klijentima.",
+			"benefit4": "Primaj obavijesti o potražnji poslova",
+			"feature4": "Odmah saznaj za nove poslove u okolici. Šaljemo samo provjerene upite i štedimo ti vrijeme.",   
+			"valuepropositionheadline": "100% Provjereni podaci. Točne slike. Stvarne preporuke.",
+			"followup": "I još mnogo alata koji ti pomažu u dobivanju više posla...",
+			"calltoaction": "Saznaj više"
+		},
+		"mission": {
+			"headline": "Cilj nam je da kvalitetni majstori i poduzeća uvijek imaju posla, a ljudi svaki put dobiju odličnu uslugu", 
+			"subheadline": "Želimo iskoristiti tehnologiju za spajanje kvalitetnih majstora i ljudi koji ih traže na obostranu korist.", 
+			"plan": "Od planiranja...",
+			"work": "preko rada...",
+			"bbq": "...do piva i roštilja" 
+		},
+		"partnersheadline":"Naši partneri",
+		"partnerssubheadline":"Organizacije koje pomažu radu i viziji Hefesta",
+		"user": {
+			"headline": "Poboljšaj iskustvo pretraživanja i podupri omiljene majstore",
+			"subheadline": "Postani član Hefesta i otvori dodatne mogućnosti, besplatno.",
+			"benefit1": "Poveži svoj račun s Facebookom",
+			"feature1": "Saznaj koji su majstori radili kod tvojih prijatelja i koji od prijatelja ih znaju ili preporučuju.",
+			"benefit2": "Ocijeni i preporuči majstora",
+			"feature2": "Napiši kritiku o majstoru nakon obavljenog posla i pomozi drugim ljudima u izboru.",
+			"benefit3": "Čuvaj povijest radova",
+			"feature3": "Imaj pregled svih radova na svojoj kući i majstora koji su ti radili. Koristi ih kao pomoć u budućnosti.",
+			"calltoaction": "Pridruži se Hefestu"
+		},
+		"contact": {
+			"headline": "Kontaktiraj nas za pitanja i suradnju"
+		}
+    },
+   	"salespage": {
+		"headline": "Dobij više posla i povećaj prihode.",
+		"subheadline": "Pomažemo kvalitetnim majstorima i poduzećima u privlačenju klijenata preko Interneta i ostvarivanju većeg broja upita.",
+		"moneyshot": {
+			"headline": "<strong>&ldquo; Dobili smo 11 poslova u 3 mjeseca &rdquo;</strong>",
+			"testimonial": "&ldquo; U 3 mjeseca smo preko Hefesta dobili stotinjak upita i 27 poslova, više nego preko usmenih preporuka. Prestali smo održavati staru web stranicu i smanjili troškove oglašavanja u oglasnicima, novinama i na žutim stranicama &rdquo;"
+		},
+		"secondheadline": "S profilom na Hefestu dobivat ćeš kvalitetne upite cijele godine - počevši odmah",
+		"introduction": "Za razliku od oglasnika i običnih web stranica, dobivaš skup alata za promociju i profil dizajniran tako da te što više ljudi pronađe i odluči se za tvoje proizvode i usluge ispred konkurencije.",  
+		"valueproposition2":"<strong>Popunjavanje profila traje 30 minuta</strong>, nemaš brige s održavanjem i pomažemo ti u pisanju sadržaja koji povećava broj upita.",
+		"valueproposition3":"<strong>Dajemo ti alate za promociju prošlih radova i pokazivanje zadovoljstva klijenata</strong> kao 100% provjereni način gradnje povjerenja i povećanja izgleda da se ljudi odluče za tebe.",  
+		"valueproposition4":"<strong>Dostupna ti je besplatna 24-satna podrška</strong>. Radimo s tobom na što kvalitetnoj promociji i povećanju ukupnih prihoda.",	  
+		"calltoactionheader": "<strong>Postani član Hefesta i počni dobivati više posla već danas.</strong>",
+		"calltoactionexplanation": "Isprobaj našu uslugu bez obveza. Možeš odustati u bilo kojem trenu.",
+		"calltoaction": "<strong>Registriraj moj profil - 90 dana besplatno</strong>",	
+		"orcallus": "Ili nas nazovi na:",
+		"calltoactionfollowthrough": "(Registracija traje manje od 30 sekundi. Probni period je potpuno besplatan. Nema ugovora i ne tražimo te kreditnu karticu.)",
+		"happycustomers": "500+ zadovoljnih klijenata",
+		"client1": "<strong>Ivan Kovačić</strong><br>Vlasnik, <a> Kovačić građevinski radovi</a>",
+		"client2":"<strong>Jelena Miholjević</strong><br>Marketinški direktor, <a> Stolarija Minković</a>",
+		"client3": "<strong>Ljubo Zečević</strong><br>Osnivač i vlasnik, <a> Parketi Zečević</a>",
+		"testimonialsheadline": "Što kažu poduzeća svih veličina koja su isprobala našu uslugu i koriste je za rast svog poslovanja",
+		"testimonial1": "&ldquo; Hefest nam je u zadnjih pola godine donio dvadesetak novih poslova i dvostruko više upita, dok smo istovremeno smanjili troškove oglašavanja. Sretni smo velikim postotkom većih poslova, kakve preferiramo, kao što je gradnja obiteljske kuće. &rdquo;",
+		"testimonial2": "&ldquo; Zamijenili smo staru web stranicu profilom na Hefestu. Osim što izgledamo profesionalnije, umjesto 2 do 3 upita tjedno dobivamo ih petnaestak. Drago nam je kad ljudi traže da im izradimo nešto što su vidjeli među našim prošlim radovima.&rdquo;",   		
+		"testimonial3": "&ldquo; Ovo mi je prvi pokušaj oglašavanja na Internetu. Ekipa s Hefesta mi je pomogla da ispeglam profil i već nakon 3 dana sam dobio dva ozbiljna klijenta. Redovito dodajem nove radove i pitam klijente za kratku kritiku. Žao mi je što ovakvo nešto nisam radio prije.  &rdquo;",
+		"reinforcement" : {
+			"headline": "Gubiš li prihode neiskorištavanjem svih mogućnosti oglašavanja na Internetu?",
+			"subheadline": "Članstvom na Hefestu dobivaš sve alate koji će ti ikad trebati za privlačenje klijenata preko Interneta.",
+			"benefit1": "Pokaži kvalitetu",
+			"detail1": "Kvalitetan si majstor ili poduzeće? Zatraži pristup Hefestu.",
+			"benefit2": "Promoviraj svoj brand",
+			"detail2": "Gradi svoj posao na webu uz pomoć naših alata i profesionalne podrške.",
+			"benefit3": "Dobivaj upite",
+			"detail3": "Privuci više klijenata, smanji troškove oglašavanja i povećaj prihode."      
+		},
+		"benefit1": "Ostavi dobar prvi dojam i zadrži posjetitelja na svojoj stranici.",
+		"feature1": {
+			"opinion": "Ljudi stvore mišljenje o tvojoj stranici u",
+			"impression": "Ova brojka je rezultat niza istraživanja o vremenu potrebnom da čovjek podsvjesno odluči sviđa li mu se stranica ili ne.",   
+			"decide": "i odluče hoće li ostati ili otići. Jednostavan i standardan dizajn je",
+			"attractive": "privlačniji",
+			"simpledesign": "Rezultati istraživanja Googlea iz 2012.",
+			"trust": "i stvara povjerenje, dok neuobičajeni dizajn i kompleknost tjeraju posjetitelje da odu.",
+			"yourprofile": "Tvoj profil na Hefestu je web stranica čije je korisničko sučlje izrađeno po najboljim svjetskim praksama i ostavlja dojam profesionalnosti zbog kojeg će posjetitelj pročitati tvoju ponudu.",
+			"looksgood": "Izgleda dobro",
+			"resize": "Probaj smanjiti prozor da vidiš kako se stranica automatski prilagođava malim ekranima i izgleda odlično na mobitelu kao i na stolnom računalu.",
+			"mobile": "na svim uređajima, od računala do mobitela, što znači da mobilni korisnici neće otići konkurentu frustrirani zbog lošeg iskustva.",   			
+			"objection": "&ldquo;Ali, što ako već imam web stranicu... &rdquo;",
+			"study": "Poduzeća diljem svijeta ulažu u dizajn svojih stranica da bi ostvarila bolje rezultate. Samo 2,5 tjedana nakon redizajna, ova trgovina kravatama povećala je ukupne prihode za <strong>42,4%</strong>, a prihode s mobilnih uređaja za <strong>377,6%</strong>:",
+			"followup": "Zamisli profil na Hefestu kao web stranicu na steroidima. Može te promovirati uz tvoju postojeću stranicu (i pobijediti je) ili je može zamijeniti." 
+		},
+		"benefit2": "Pretvori veći broj posjetitelja u klijente.",
+		"feature2": {
+			"goal": "Cilj tvojeg oglašavanja je dobiti kvalitetne upite i nove klijente. Što bolje ljudi razumiju tvoju ponudu i po čemu je bolja od konkurencije, veća je šansa da će ih zainteresirati. Ako se stranica ne prodaje, i najbolje Google Ads kampanje su bačen novac.",
+			"action": "Hefestove stranice su građene na temelju mnogobrojnih marketinških istraživanja, da strukturom i sadržajem posjetitelju daju potpunu informaciju i potaknu ga da ti se javi. Dobivaš profil koji ne samo da je privlačan oku nego i daje rezultate.",   
+			"results": "Rezultati nisu slučajni nego dolaze iz znanosti",
+			"conversion":"konverzije",
+			"conversionoptimization": "Optimizacija konverzije je metoda ugađanja web stranice s ciljem da poveća broj posjetitelja koji postanu klijenti.",
+			"explanation": "Praktična primjena znanosti konverzije je najjeftiniji i najbrži način za povećanje prihoda. Ako trenutno <strong>1%</strong> posjetitelja koji nađu tvoju stranicu pošalju upit, ali uspiješ povećati tu brojku na <strong>2%</strong>, upravo si <strong>udvostručio</strong> prihode.", 
+			"experts": "Tvoj profil je pomno planiran i koristi iste principe kojima stručnjaci u svijetu",
+			"casestudy": "uspješno povećavaju zaradu malim i velikim poduzećima:",
+			"companyname": "Primjer proizvoda 'Highrise' firme '37Signals' (sadašnji Basecamp), 2011. godine",
+			"roi": "... i donosi ti skoro jednake rezultate za samo djelić cijene, bez ikakve gnjavaže s tvoje strane.",
+			"extraservice": "Iako i sam profil daje 80% rezultata, nudimo i dodatnu uslugu konstantne optimizacije gdje detaljno upoznajemo tvoj posao, istražujemo profil ciljanih klijenata i testiramo razne varijante sadržaja profila za još bolje rezultate."			  			
+		},
+		"benefit3": "Budi nađen - automatski dobivaš optimizaciju za Google i druge tražilice (SEO).",
+		"feature3": {
+			"seo": "Search Engine Optimization - skup pravila za poboljšanje stranice i povećanje broja posjetitelja s tražilica.",
+			"searchusage": "Prema procjenama stručnjaka, 80% korisnika Interneta aktivno koristi tražilice.",    
+			"seohelps": "je nužan za pozicioniranje stranice pri vrhu rezultata korisničkih pretraga i dovođenju klijenata koji traže proizvode i usluge kojima se bavi i tvoj posao.",
+			"organicvspaid": "Rezultati Googleova istraživanja govore da <strong>70-80% korisnika klikne na jedan od rezultata na prvoj stranici, a istovremeno ignorira plaćene oglase.</strong> Tvoj položaj u rezultatima ima snažan utjecaj na broj ljudi koji će vidjeti tvoju ponudu.",
+			"seooptimization": "Profil na Hefestu ti automatski osigurava i vidljivost u rezultatima tražilica te osnovnu optimizaciju. Kao dodatna usluga, nakon registracije analiziramo njegov sadržaj te predlažemo promjene u tekstu da te pomaknemo još više u rezultatima.",   
+			"service": "Naš tim stručnjaka neprestano prati SEO trendove, ulaže u najnovije alate i radi na prepoznatljivosti Hefesta kako bismo naše majstore približili što većem broju ljudi. Natječemo se s drugim stranicama za tebe."  
+		},
+		"benefit4": "Preporučujemo te ljudima koji traže majstora u tvojoj blizini.",
+		"feature4": {
+			"p1": "Pojavljuj se u rezultatima Hefestove tražilice pred ljudima koji ciljano traže usluge i proizvode u svojoj okolici. Prikazujemo tvoju lokaciju te broj radova, preporuka i ocjena prošlih radova. Zainteresiranog korisnika vodimo na tvoj profil.",
+			"p2": "Automatski preporučujemo poduzeća i majstore koji su najbliži korisniku, radili su u njegovom susjedstvu ili kod prijatelja i imaju velik broj preporuka i zadovoljnih klijenata. Tvoj položaj u rezultatima ovisi o tebi i tvom radu i ne može se kupiti.",
+			"p3": "Naši algoritmi koriste veliku količinu podataka da bi spojili majstore i klijente koji si najbolje odgovaraju. Na ovaj način ne samo da dobivaš više posla nego i bolje poslove."  
+		},
+		"benefit5": "Pokaži prošle radove i njima privuci nove klijente.",
+		"feature5": {
+			"p1": "Ljudi često ne znaju što traže dok to ne vide. Slikama i podacima o prošlim radovima ne samo da <strong>promoviraš kvalitetu svog rada</strong> nego i pomažeš ljudima u odluci da žele istu stvar, i to od tebe.",
+			"p2": "Preko našeg alata za pretragu ljudi mogu vidjeti sve radove u svojoj blizini i na taj način doći do tebe. Treba ti <strong>manje od 5 minuta</strong> da uneseš podatke o obavljenom poslu, a svaki novi unos povećava šansu da dobiješ zainteresiranog klijenta."  
+		},
+		"benefit6": "Prepusti brigu o sadržaju svog profila nama i ostvari još bolje rezultate.",   
+		"feature6": {
+			"caption": "<strong>Riječi su bitne</strong>",
+			"detailedcaption": "Copywriting konzultant Michael Asgaard je ovom promjenom skandinavskom lancu teretana <em>'Fitness World'</em> udvostručio članstvo.",  
+			"p1": "Opis tvoje ponude je najbitniji dio profila i određuje hoće li posjetitelj htjeti znati više ili će otići na drugu stranicu. Dobra prezentacija ponude će značajno povećati broj ljudi koji će okrenuti tvoj broj ili ti poslati poruku.",
+			"p2": "Želiš dati razlog posjetitelju zašto da izabere tebe, a ne konkurenta. Ljudi prouče 5-10 poduzeća prije donošenja odluke i zato je bitno imati ponudu koja se ističe. Nudimo ti besplatnu pomoć u pisanju inicijalnog sadržaja nakon registracije.",
+			"p3": "Tekst na tvojoj stranici mora uvjeriti posjetitelja da svoj teško zarađeni novac da tebi, a ne nekom od mnogobrojne konkurencije. Svaka rečenica koju pišemo za tebe ima uporište u dokazanim principima oglašavanja i planirana je da radi prema ovom cilju.",  
+			"objection": "<em>&ldquo; Ali, već pišem prema osjećaju i onome što zvuči dobro...&rdquo; </em>",
+			"handling": "Svaki majstor radi na temelju znanja, vještine i iskustva, a ne osjećaja. Ista je stvar i s tekstom oglašavanja. Razlika između prosječnog i odličnog teksta je, osim u generiranim prihodima, u znanju provjerenih praksi. Mi smo ih proučili za tebe."
+		},
+		"testimonialsvalueheadline": "Izgradi povjerenje pokazivanjem preporuka zadovoljnih klijenata.",
+		"testimonialsvaluesubheadline": "Tvoji klijenti hvale tvoj rad i preporučuju te prijateljima? Pokaži to ljudima koji te vide prvi put.",
+		"mckinsey": "Prema velikom istraživanju poznate konzultantske kuće McKinsey iz 2010. godine, <strong>mišljenja drugih ljudi i preporuke stoje iza 20-50% odluka o izboru proizvoda ili usluge</strong>, ali samo 33% poduzeća ih aktivno prikuplja i koristi za povećanje prihoda. Naši alati ti pomažu da budeš u ovoj skupini, ispred 66% konkurencije koja još uvijek na pravi način ne koristi preporuke u svojoj online promociji. Istraživanje vodećeg autoriteta za digitalni marketing, Econsultancyja, pokazuje da su posjetitelji stranica koje imaju kritike korisnika 63% skloniji kupnji, a prodaja u prosjeku raste za 18%.",	
+    	"study": "Kao primjer koji pokazuje moć preporuka, najveći britanski portal za pronalaženje posla nakon fakulteta i pripremu kandidata za testove zapošljavanja, WikiJob, povećao je broj klijenata za 34% dodavanjem 3 preporuke:", 
+   		"testimonialsconclusion": "Preporuke ljudima olakšavaju odluku da se odluče za tvoje usluge. Pokazujući im da su drugi ljudi u sličnoj situaciji izabrali tebe i na kraju bili zadovoljni, dobivaš snažnu psihološku prednost u trenutku korisnikove odluke. Sustav preporuka na Hefestu koristi najbolje prakse i rezultate mnogobrojnih istraživanja da od njih izvučeš maksimalnu korist.",
+		"benefit7": "Povećaj broj upita i poboljšaj svoj položaj u rezultatima pretraga pokazivanjem iskrenih preporuka.",   
+		"feature7": {
+			"p1": "Pomažemo ti da nakon obavljenog posla na jednostavan način prikupiš i pokažeš preporuku zadovoljnog klijenta. Za još jači učinak i povećanje vjerodostojnosti, preporuku možeš povezati s podacima i slikama o konkretnom poslu.",
+			"p2": "Ne moraš skupljati kritike za svaki posao, ali ne može ih biti previše. <strong>Fotografije stvarnih osoba i njihova imena dokazano pomažu u značajnom povećanju broja upita</strong>, pogotovo kod majstorskih usluga i zato takve kritike imaju veću težinu.",
+			"p3": "Možeš unositi i kritike anonimnih ljudi, ali za razliku od trgovina kao što je Amazon gdje se prodaju proizvodi u velikim količinama i to relativno male vrijednosti, <strong>kod usluga veće vrijednosti i radova u nečijoj kući, lica i imena su izuzetno važna.</strong>",
+			"p4": "Veći broj kritika s fotografijama i imenima ti pomaže u pozicioniranju više u listi rezultata. Anonimne kritike također imaju utjecaj, ali daleko manji.",
+			"p5": "Ako si radio firmi, pokaži njen logo i izjavu vlasnika. Ako si radio u nečijoj kući, uz izjavu pokaži i sliku vlasnika. Iskoristi <strong>moć koju fotografije i imena imaju u podizanju vjerodostojnosti kritika</strong> i osjeti razliku na svom bankovnom računu."      
+		},
+		"benefit8":"Mogu li i negativne kritike pomoći?",
+		"feature8": {
+			"p1": "Vjerovao ili ne, <strong>nekoliko negativnih kritika može pomoći</strong>. Na ozbiljnim portalima za svaki proizvod ili uslugu postoje miješane kritike. Loša kritika zapravo povećava vjerodostojnost onih dobrih.",
+			"p2": "Reevo, firma koja se bavi analizom online tržišta proizvoda i usluga, odlučila je provjeriti utjecaj loših kritika na posjetitelje, i to na uzorku od 2,5 milijuna kritika. Našli su da <strong>68% ljudi više vjeruje miješanim kritikama.</strong>",
+			"p3": "Naravno, previše negativnih kritika odmaže. Iako te ljudi mogu i sami recenzirati, sve kritike provjeravamo i u svakom trenu možeš osporiti onu za koju smatraš da nije vjerodostojna ili je podmetnuta."      
+		},
+		"benefit9":"Budi preporučen za određene usluge i preporučuj druge majstore.",
+		"feature9": {
+			"p1": "Tvoj profil dolazi s alatom za preporuke koji omogućava da te ljudi i drugi majstori preporuče drugima kao najboljeg majstora za pojedine usluge. Tvoj profil posjetitelju pokazuje tko te preporučuje i majstore koje ti preporučuješ.",
+			"p2": "Veliki broj preporuka značajno doprinosi stvaranju povjerenja kod posjetitelja, kao i usmene preporuke. Učinak je još jači ako preporuka dolazi od majstora kojeg posjetitelj zna. Ovakva informacija može biti prevaga da čovjek digne slušalicu i nazove te."
+		},
+		"benefit10":"Dobivaš alat za ultimativnu preporuku - korisnikove prijatelje.",
+		"feature10": {
+			"p1": "Usmene preporuke su i dalje najveći i najvjerodostojniji oblik pronalaska majstora. Problem je što nitko ne zna koji su sve majstori radili njihovim prijateljima i susjedima ili koji od ljudi kojima vjeruju može preporučiti kvalitetnog majstora.", 
+			"p2": "Registracijom na Hefest dobivaš alat koji povećava domet usmenih preporuka. <strong>Kad korisnik traži majstora, ako te neki od njegovih prijatelja preporučuje, radio si kod njih ili imate zajedničkog prijatelja, bit ćeš preporučen kao jedan od prvih izbora.</strong>",
+			"p3": "Korisnici dobivaju ovu mogućnost kad povežu Hefestov i Facebook račun. Tebi preporučamo isto jer ne samo da će posjetitelji moći vidjeti imate li zajedničkih prijatelja nego ćeš se na Hefest moći prijaviti preko Facebook računa jednim klikom.",
+			"p4": "U usporedbi s drugim izvorima, izglednije je da ćeš iz upita korisnika koji te nađu preko prijatelja ili susjeda na kraju dobiti odlične klijente."
+		},
+		"testimonialsheadline2": "Ova poduzeća grade svoj brand na Hefestu i bilježe rast prihoda od ulaganja u kvalitetne preporuke",
+		"testimonial4.headline": "<strong>&ldquo; Hefest + Facebook = novi klijent. &rdquo;</strong>",
+		"testimonial4": "&ldquo; Čovjek je vidio da imamo zajedničkog prijatelja i odmah mi se javio. Lako smo dogovorili posao. &rdquo;",
+		"client4":"<strong><a>Vid Vučak</a></strong><br>Akademski kipar",
+		"testimonial5.headline": "<strong>&ldquo; Odličan sustav kritika &rdquo;</strong>",
+		"testimonial5": "&ldquo; Otkad sam na Hefestu, nakon obavljenog posla uvijek tražim kratku kritiku i pitam ljude mogu li ih slikati. &rdquo;",   		
+		"client5": "<strong>Ozren Rapa</strong><br>Predradnik, <a>Fiumens d.o.o</a>",
+		"testimonial6.headline": "<strong>&ldquo; 15 upita od preporuka &rdquo;</strong>",
+		"testimonial6": "&ldquo; U mjesec dana dobijemo 15-ak upita od ljudi koji kažu da su nam se javili jer imamo toliko dobrih preporuka. &rdquo;",
+		"client6":	"<strong>Ivan Smolčić</strong><br>Izvršni direktor, <a>Spetra d.o.o</a>",
+		"ourhelpheadline": "Tvoj posao dobiva našu tehnologiju i poznavanje weba",
+		"ourhelpsubheadline": "Svaki put kad te spojimo s klijentom i ti dobiješ dobar posao, a on kvalitetnu uslugu, svi dobivamo.",
+		"benefit11":"Nemaš brige s održavanjem, sve je na nama",
+		"feature11": {
+			"p1": "Hefest se vrti na našim sigurnim serverima pa se ne moraš baviti ničim tehničkim. S 99,996% dostupnosti, možeš biti siguran da ćeš 365 dana u godini biti vidljiv potencijalnim klijentima. Sve što ti ili posjetitelji trebate da počnete koristiti Hefest je web preglednik ili smartphone."
+		},
+		"benefit12":"Vrijednost tvog profila raste s vremenom",
+		"feature12": {
+			"p1": "Pratimo najnovije trendove u web tehnologijama umjesto tebe i konstantno poboljšavamo iskustvo Hefestovih korisnika, a time i rezultate tvog profila. Volimo to što radimo i ulažemo u znanje i alate da tvoje poslovanje učinimo još uspješnijim.", 
+			"p2": "Ne moraš brinuti o pojmovima kao što su SEO, optimizacija konverzija, copywriting, analitika i web tehnologije. Dovoljno je da radiš svoj posao kvalitetno kao i dosada, a naš je posao da to približimo što većem broju ljudi." 
+		},
+		"benefit13":"Uvijek smo na tvojoj usluzi - 24 sata dnevno",
+		"feature13": {
+			"p1": "Stojimo ti na raspolaganju za sva pitanja i pomoć oko profila. Otklanjamo tehničke probleme u najbržem mogućem roku i otvoreni smo za prijedloge kako da ti Hefest učinimo još korisnijim, novim uslugama i alatima ili poboljšanjem starih.",
+			"p2": "Prijateljski i pošten odnos prema ljudima je temelj našeg poslovanja. Ophodimo se prema klijentima kako bismo htjeli da se ophodi s nama i nastojimo da sve što radimo bude u njihovom najboljem interesu." 
+		},
+		"alerts": {
+			"headline":"Dobivaj obavijesti o novim poslovima u okolici",
+			"details":"Šaljemo ti samo kvalitetne upite koji zadovoljavaju tvoje kriterije. Štedimo ti vrijeme tako što ručno provjeravamo svaki upit i spajamo te samo s ozbiljnim klijentima. Na tebi je da odlučiš hoćeš li se javiti čovjeku i poslati mu ponudu.",
+			"user":"Korisnik zatraži ponudu za jednu ili više usluga",
+			"filter": "Provjeravamo upit i u obzir uzimamo samo one ozbiljne",      
+			"alert":"Zainteresiranim poduzećima šaljemo obavijest"
+		},
+		"valuebuildupheadline": "Dobivaš paket profesionalnih alata za djelić cijene pojedinačnih usluga",
+		"valuebuildupsubheadline": "Budi jedno od 500+ poduzeća koja koriste Hefest za online promociju",
+		"pricing": {
+		    "whatyouget": "Što dobivaš", 
+		    "professional": "Profesionalac",
+		    "target": "Za majstore, mala i srednja poduzeća",
+		    "monthlyprice": "€29",
+		    "cents": "99",
+		    "month": "/mjesec",			   
+		    "yearlyprice": "€299/godina",
+		    "yearlypayment": "(15% popusta za svaki mjesec. Godišnje plaćanje.)",
+			"profile": "Profesionalno dizajnirana stranica",
+			"data": "Prikaz detalja o tvom poslu, uslugama i lokaciji",
+			"seo": "Optimizacija za tražilice",
+			"search": "Pojavljivanje u rezultatima Hefestove tražilice",
+			"copy": "Pomoć kod pisanja sadržaja",
+			"work": "Neograničen broj prošlih radova",
+			"testimonials" : "Neograničen broj kritika",
+			"endorsements" : "Dobivanje i davanje preporuka",
+			"facebook": "Integracija s Facebookom",
+			"alerts": "Obavijesti o novim poslovima",
+			"support": "24/7 korisnička podrška"
+		},
+		"faq": {
+			"heading": "Često postavljana pitanja",
+			"freetrial": "Kako funkcionira probni period?",
+			"freetrial.answer": "Naš 90-dnevni probni period je 100% besplatana i ne zahtijeva podatke s kreditne kartice. Ako na kraju probnog perioda želiš unaprijediti svoj račun i nastaviti koristiti našu uslugu, odlično. Ako ne, možeš izbrisati svoj račun, ili ga samo deaktivirati ako mu se želiš vratiti kasnije i sačuvati podatke.",
+			"payment": "Koje tipove plaćanja primate?",
+			"payment.answer": "Primamo MasterCard, Visu, American Express, Diners i Paypal. Podsjećamo da ne trebaš dati podatke o kreditnoj kartici da bi počeo s besplatnim probnim periodom.",
+			"commitment": "Postoji li ugovorna obveza?",
+			"commitment.answer": "Hefest je usluga koja funkcionira na temelju mjesečne pretplate. Nema ugovora ni dugoročnih obveza. Plaćaš na mjesečnoj osnovi i ako otkažeš račun, prestaješ plaćati. Ako ne želiš plaćati svaki mjesec, možeš izvršiti plaćanje za cijelu godinu.",
+			"reliability": "Koliko je pouzdana vaša usluga?",
+			"reliability.answer": "Hefest čuva tvoju stranicu i podatke na sigurnim serverima. Svake noći radimo sigurnosne kopije svih tvojih podataka."		  
+		},
+		"trust": "Hefestu vjeruju ova i mnoga druga poduzeća",
+		"urgency": {
+			"heading": "Zatraži pristup sad i dobij nisku cijenu doživotno - budi imun na buduća povećanja cijene.",
+			"detail": "Hefestovi alati će tvoje poslovanje odvesti na viši nivo i dati ti prednost pred konkurencijom. Ostvarit ćeš stvarne rezultate bez plaćanja skupih dizajnera, developera, copywritera, SEO i drugih konzultanata. Tvoj posao će rasti zajedno s Hefestovim brandom i profitirati od njegove mreže i konstantnog ulaganja u njegovu kvalitetu.",
+			"comparison": "Većini će se članarina na Hefestu <strong>isplatiti već nakon jednog ili dva posla.</strong>",
+			"promise": "Uporno radimo na poboljšanju postojećih alata i proširenju dometa vidljivosti naših majstora i poduzeća. Ako postaneš član danas, obećajemo da ti <strong>pretplata za sve alate koje si inicijalno dobio neće porasti</strong>, čak i ako se cijena u međuvremenu udvostruči."  
+   		},
+   		"disclaimer":""
+    },
+    "servicerequest": {
+    	"headline": "Opiši posao i dobij ponude od kvalitetnih majstora",
+    	"messages": {
+    		"success":"",
+    		"locality": "Unesi jedno od mjesta u Hrvatskoj."
+    		
+    	},
+    	"selectservice": "Koje usluge trebaš?",
+    	"addservices": "Dodaj usluge u listu ispod. Obavijest o poslu bit će poslana majstorima i poduzećima koji nude sve odabrane usluge.",
+    	"selectedservices": "Odabrane usluge",
+    	"add": "Dodaj uslugu",
+    	"chooseprofession": "Čija je usluga?",
+    	"chooseservice": "Odaberi uslugu",
+    	"locality": "U kojem mjestu je treba izvesti?",
+    	"locality.placeholder": "Upiši selo, grad, kvart...",
+    	"addservice": "Dodaj uslugu",
+    	"budget": "Koliki ti je budžet?",
+    	"maxprice": "Maksimalni trošak",
+    	"material": "Treba li ponuda uključivati i materijal?",
+    	"ownmaterial": "Ne - sam ću ga nabaviti",
+    	"dates": "Mora li posao početi ili završiti do nekog datuma? Ako ne, polje ostavi praznim.",
+    	"startdate": "Rok za početak posla",
+    	"enddate": "Rok za završetak posla",
+    	"description": "Opiši posao.", 
+    	"description.placeholder": "Navedi detalje o poslu koje smatraš bitnim. Što bolje opišeš posao, veća je šansa da će ti se majstori javiti i da ćeš dobiti kvalitetnije ponude."
+    	
+    },
+    "servicerequests": {
+    	"headline": "Poslovi",
+		"new": "Dobij ponude"
+    },
+    "activate": {
+        "title": "Aktivacija",
+        "messages": {
+            "success": "Hvala vam! Vaša E-mail adresa je uspješno validirana.",
+            "error": "<strong>Vaša E-mail adresa nije mogla biti validirana.</strong> Pokušajte se registrirati."
+        }
+    },
+    "professionals": {
+    	"categories":"Majstori/Usluge",
+    	"noresults": "Nismo našli nijednog",
+    	"professionals": "majstora",
+    	"withserviceavailable": "s uslugom dostupnom u",
+    	"projects": "projekata",
+    	"reviews": "ocjena",
+    	"morereviews":"još kritika",
+    	"endorsements": "preporuka!",
+    	"orderby": {
+    		"employees": "Broju zaposlenika",
+    		"yearsinbusiness": "Godinama iskustva",
+    		"hefestscore": "Hefestovoj ocjeni",
+    		"endorsements": "Broju preporuka",
+    		"reviews": "Prosječnoj ocjeni",
+    		"projects": "Broju projekata"   	
+    	},
+    	"hefestscore": "Hefestova ocjena. Klikni za detalje",
+    	"locatedin": "Sa sjedištem u:",
+    	"locatedin.placeholder": "Traži po županiji, gradu, selu...",
+    	"acceptscreditcards": "Prima kreditne kartice",
+    	"requestoffer": "Zatraži besplatnu ponudu!"
+    },
+    "hefestScore": {
+    	"title": "Hefestova ocjena",
+    	"headline": "Hefestova ocjena ti pomaže vidjeti kako poduzeće stoji kad se u obzir uzme nekoliko faktora koji pokazuju njihovu vjerodostojnost i kvalitetu. <br><br> Sljedeće stvari pozitivnu utječu na ocjenu, s drukčijim težinama:",
+   		"endorsements": "Broj ljudi koji ih preporučuje",
+   		"reviews": "Broj pozitivnih kritika od prošlih klijenata",
+   		"projects": "Broj prošlih radova s detaljima i slikama",
+   		"yearsinbusiness": "Godine iskustva",
+   		"photos": "Broj slika poduzeća i prošlih radova" 
+    },
+    "register": {
+        "title": "Registration",
+        "form": {
+            "button": "Register"
+        },
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "Your login is required.",
+                    "minlength": "Your login is required to be at least 1 character",
+                    "maxlength": "Your login cannot be longer than 50 characters"
+                }
+            },
+            "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
+            "error": {
+                "fail": "<strong>Registration failed!</strong> Please try again later.",
+                "userexists": "<strong>Login name already registered!</strong> Please choose another one."
+            }
+        }
+    },
+    "login": {
+        "title": "Authentication",
+        "form": {
+            "password": "Password",
+            "password.placeholder": "Your password",
+            "rememberme": "Automatic Login",
+            "button": "Authenticate"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>Authentication failed!</strong> Please check your credentials and try again."
+            }
+        }
+    },
+    "settings": {
+        "title": "User settings for [<b>{{username}}</b>]",
+        "form": {
+            "firstname": "First Name",
+            "firstname.placeholder": "Your first name",
+            "lastname": "Last Name",
+            "lastname.placeholder": "Your last name",
+            "button": "Save"
+        },
+        "messages": {
+            "error": "<strong>An error has occured!</strong> Settings could not be saved.",
+            "success": "<strong>Settings saved!</strong>",
+            "validate": {
+                "firstname": {
+                    "required": "Your first name is required.",
+                    "minlength": "Your first name is required to be at least 1 character",
+                    "maxlength": "Your first name cannot be longer than 50 characters"
+                },
+                "lastname": {
+                    "required": "Your last name is required.",
+                    "minlength": "Your last name is required to be at least 1 character",
+                    "maxlength": "Your last name cannot be longer than 50 characters"
+                }
+            }
+        }
+    },
+    "changepassword": {
+        "action": "Promijeni lozinku",
+        "messages": {
+            "error":  "<i class='glyphicon glyphicon-warning-sign'></i><strong>Dogodila se greška prilikom obrade zahtjeva!</strong> Lozinka nije mogla biti promijenjena. Provjerite je li stara lozinka ispravna i pokušajte opet.",
+            "success": "<i class='glyphicon glyphicon-saved'></i><strong>Vaša lozinka je uspješno promijenjena!</strong>"
+        }
+    },
+    "sessions": {
+        "title": "Active sessions for [<b>{{username}}</b>]",
+        "table": {
+            "ipaddress": "IP address",
+            "useragent": "User Agent",
+            "date": "Date",
+            "button": "Invalidate"
+        },
+        "messages": {
+            "success": "<strong>Session invalidated!</strong>",
+            "error": "<strong>An error has occured!</strong> The session could not be invalidated."
+        }
+    },
+    "tracker": {
+        "title": "Real-time user activities",
+        "table": {
+            "userlogin": "User",
+            "ipaddress": "IP Address",
+            "userAgent": "User agent",
+            "page": "Current page",
+            "time": "Time"
+        }
+    },
+    "metrics": {
+        "title": "Application Metrics",
+        "refresh.button": "Refresh",
+        "health": {
+            "title": "Heath checks",
+            "database": "Database: ",
+            "email": "Email: ",
+            "stacktrace": "Stacktrace"
+        },
+        "jvm": {
+            "title": "JVM Metrics",
+            "memory": {
+                "title": "Memory",
+                "total": "Total Memory",
+                "heap": "Heap Memory",
+                "nonheap": "Non-Heap Memory"
+            },
+            "threads": {
+                "title": "Threads",
+                "all": "All",
+                "runnable": "Runnable",
+                "timedwaiting": "Timed waiting",
+                "waiting": "Waiting",
+                "blocked": "Blocked",
+                "dump": {
+                    "title": "Threads dump",
+                    "id": "Id: ",
+                    "blockedtime": "Blocked Time",
+                    "blockedcount": "Blocked Count",
+                    "waitedtime": "Waited Time",
+                    "waitedcount": "Waited Count",
+                    "lockname": "Lock name",
+                    "stacktrace": "Stacktrace",
+                    "show": "Show",
+                    "hide": "Hide"
+                }
+            },
+            "gc": {
+                "title": "Garbage collections",
+                "marksweepcount": "Mark Sweep count",
+                "marksweeptime": "Mark Sweep time",
+                "scavengecount": "Scavenge count",
+                "scavengetime": "Scavenge time"
+            },
+            "http": {
+                "title": "HTTP requests (events per second)",
+                "active": "Active requests:",
+                "total": "Total requests:",
+                "table": {
+                    "code": "Code",
+                    "count": "Count",
+                    "mean": "Mean",
+                    "average": "Average"
+                },
+                "code": {
+                    "ok": "Ok",
+                    "notfound": "Not found",
+                    "servererror": "Server Error"
+                }
+            }
+        },
+        "servicesstats": {
+            "title": "Services statistics (time in millisecond)",
+            "table": {
+                "name": "Service name",
+                "count": "Count",
+                "mean": "Mean",
+                "min": "Min",
+                "max": "Max",
+                "p50": "p50",
+                "p75": "p75",
+                "p95": "p95",
+                "p99": "p99"
+            }
+        },
+        "ehcache": {
+            "title": "Ehcache statistics",
+            "cachename": "Cache name",
+            "objects": "Objects",
+            "hits": "Hits",
+            "misses": "Misses",
+            "evictioncount": "Eviction count",
+            "mean": "Mean get time (ms)"
+        }
+    },
+    "logs": {
+        "title": "Logs",
+        "nbloggers": "There are {{ total }} loggers.",
+        "filter": "Filter",
+        "table": {
+            "name": "Name",
+            "level": "Level"
+        }
+    },
+    "audits": {
+        "title": "Audits",
+        "filter": {
+            "title": "Filter per date",
+            "from": "from",
+            "to": "to",
+            "button": {
+                "weeks": "Weeks",
+                "today": "today",
+                "clear": "clear",
+                "close": "close"
+            }
+        },
+        "table": {
+            "header": {
+                "principal": "User",
+                "date": "Date",
+                "status": "State",
+                "data": "Extra data"
+            },
+            "data": {
+                "remoteAddress": "Remote Address:"
+            }
+        }
+
+    },
+    "errors": {
+        "title": "Error page!",
+        "403": "You are not authorized to access the page."
+    },
+    
+    "updateProfile": {
+      "menu": {
+       		"seeprofile": "Vidi profil",
+       		"pictures":"Uredi slike i naslov",
+       		"details": "Uredi podatke profila",
+       		"changepassword": "Promijeni lozinku",
+       		"pastwork": "Prošli radovi"
+       },
+       "messages": {
+            "success": "Promjene su uspješno spremljene.</strong>",
+            "error": "Profil nije mogao biti promijenjen. Provjerite podatke i pokušajte opet.",
+            "emailNotActivated": "Vaša e-mail adresa nije potvrđena i ne možemo vam poslati poveznicu za resetiranje lozinke u slučaju njezina gubitka. Da biste potvrdili e-mail adresu, kliknite na poveznicu u mailu koji ste dobili prilikom registracije.",
+            "clear": "clear",
+            "close": "close"
+        },
+        "form": {
+            "headline": {
+            	"placeholder": "Opis vašeg posla u jednoj rečenici, primjerice: 'Pouzdan i kvalitetan stolar'..."
+           	},
+           	"subheadline": {
+            	"placeholder": "Dodatan opis vašeg posla koji prati naslov, primjerice: '20 godina iskustva u izradi kuhinja od masivnog drveta'..."
+           	},
+           	"valueproposition": {
+            	"placeholder1": "Garancija isporuke usluge u dogovorenom roku...",
+            	"placeholder2": "Susretljivost naših djelatnika...",
+            	"placeholder3": "Besplatno računalno projektiranje i dostava..."
+           	},
+           	"description.placeholder": "Opis najvažnijih karakteristika vašeg poduzeća i djelatnosti",
+	        "contactemail.placeholder": "E-mail adresa na koju vas ljudi mogu kontaktirati",
+	        "telephone.placeholder": "Broj telefona za kontakt zajedno s pozivnim brojem, primjerice 01/6255-000",
+	        "mobile.placeholder": "Mobitel za kontakt, primjerice 091/000-0000",
+	        "website.placeholder": "www.mojawebstranica.hr"
+        },
+        "saveChanges":"Spremi promjene"
+    },
+	"profileImages": {
+		"headline": "Slike i naslov profila",
+		"leadImage":"Glavna slika",
+		"profileImage": "Slika profila",
+		"profileHeadline":"Naslov profila",
+		"profileSubHeadline":"Podnaslov profila",
+		"valuepropositions": "Najvažniji prijedlozi vrijednosti",
+		"valuepropositions.explanation": "Navedi tri najvažnije stvari koje te ističu ispred konkurencije. Kao primjer, možda nudiš besplatno savjetovanje tvojih stručnjaka."
+    },
+     "profileDetails": {
+    	"headline": "Detalji o tvom poslovanju",
+    	"business": "Podaci o poduzeću",
+    	"companyName": "Ime poduzeća",
+    	"ownerName": "Ime i prezime vlasnika",
+    	"yearEstablished": "Godina osnutka",
+    	"description": "Opis poduzeća",
+    	"contactDetails": "Kontakt podaci",
+    	"counties":"Županije u kojima radiš",
+    	"yourservices": "Usluge koje nudiš",
+    	"serviceDescription": "Opis usluge"
+    },
+    "professionalProfile": {
+    	"selectedTestimonials": "Što kažu prošli klijenti",
+    	"pastwork": "Prošli radovi",
+    	"pastworkFollowUp": "Ovo su neki od radova koje je poduzeće napravilo u prošlosti, s detaljnim podacima i slikama",
+    	"matchingProjects": "Našli smo {{projectCount}} radova",
+    	"comments": "komentara",
+    	"likes": "ljudi se ovo sviđa",
+    	"images": "slike",
+    	"pastworkCta": "Obavi svoj projekt",
+    	"pastworkCtaFollowUp": "Ako ti se sviđaju ovi radovi i želiš nešto slično, zatraži besplatnu ponudu odmah.",
+    	"endorsements": "Tko sve preporučuje ovo poduzeće",  
+    	"endorsementsFollowUp": "Ovi ljudi i poduzeća biraju ovog profesionalca za sve svoje projekte i preporučuju ih prijateljima i svima ostalima.",
+    	"endorsementExplanation": "Osoba ili poduzeće može preporučiti samo dva profesionalca za jedno zanimanje. Preporuka znači da bi izabrali ovog profesionalca kad im treba usluga iz njegove djelatnosti.",     
+    	"endorseProfessional": "Znaš li ovog profesionalca i koristiš njegove usluge?",
+    	"endorseProfessionalCTA": "Preporuči ih ostalima",
+    	"endorses": "ih preporučuje za",
+    	"matchingEndorsements": "Našli smo {{endorsementCount}} preporuka"
+    },
+    "footer": "This is your footer"
+}

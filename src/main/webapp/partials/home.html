@@ -1,0 +1,279 @@
+<!-- <html> -->
+<!-- <head> -->
+<!-- <meta charset="utf-8"> -->
+<!-- </head> -->
+<!-- <div class="container"> -->
+<div class="homepage">
+	<div class="container">		
+		<h1 class="text-white" translate>homepage.headline</h1>	
+	  	<h3 class="text-white" translate>homepage.subheadline</h3>	
+	  	<div class="row searchrow">
+	    	<div class="col-sm-5">		
+				<span class="glyphicon glyphicon-user typeaheadicon"></span>
+				<input type="text" ng-model="selectedSearchItem" placeholder="{{'search.professional.placeholder' | translate}}"
+					typeahead="item as item.name for item in getItems($viewValue) | filter:{name: $viewValue}" typeahead-loading="{{'search.looking' | translate}}"
+					class="form-control input-lg typeaheadinput" typeahead-editable=true typeahead-wait-ms=100 ng-enter="getProfessionals()" auto-focus/>
+			</div>	
+			<div class="col-sm-5">
+				<span class="glyphicon glyphicon-map-marker typeaheadicon"></span>
+				<input type="text" ng-model="selectedMunicipality" placeholder="{{'search.servicearea.placeholder' | translate}}"
+					typeahead="municipality as municipality.path for municipality in getMunicipalities($viewValue) | filter:$viewValue" typeahead-loading="{{'search.looking' | translate}}"
+					class="form-control input-lg typeaheadinput" typeahead-editable=true typeahead-wait-ms=100 ng-enter="getProfessionals()"/>
+			</div>						
+			<div class="col-sm-2">
+				<button class="btn btn-danger btn-lg"  ng-click="getProfessionals()"><span class="glyphicon glyphicon-search"></span> {{'global.search' | translate}} </button>		
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="section-title">
+		<h2 translate>homepage.customer.headline</h2>
+		<h4 translate>homepage.customer.subheadline</h4>
+	</div>
+	<section class="row features">
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-search text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.customer.benefit1</strong></h4>
+					<p translate>homepage.customer.feature1</p>					
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-wrench text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.customer.benefit2</strong></h4>
+					<p translate>homepage.customer.feature2</p>
+				</div>
+			</div>
+		</div>	
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-group text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.customer.benefit3</strong></h4>
+					<p translate>homepage.customer.feature3</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-ticket text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.customer.benefit4</strong></h4>
+					<p translate>homepage.customer.feature4</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="customervalueproposition">
+	<div class="container">
+		<h2 class="text-white" translate>homepage.customer.valuepropositionheadline</h2>
+		<h4 class="text-white" translate>homepage.customer.valuepropositionsubheadline</h4>
+	</div>	
+</div>
+<div class= container>
+	<div class="section-title">
+		<h2 translate>homepage.customer.testimonialsheadline</h2>
+	</div>
+	<section class="row">
+		<div class="col-sm-4">
+			<div class="thumbnail"> 
+				<img class="img img-circle" src="img/customer1.png" width="125px" height="125px"></img>
+				<div class="caption">				
+					<p class="quote" translate>homepage.customer.testimonial1</p>
+					<h4>Joseph</h4>				
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="thumbnail"> 
+				<img class="img img-circle" src="img/customer2.png" width="125px" height="125px"></img>
+				<div class="caption">				
+					<p class="quote" translate>homepage.customer.testimonial2</p>
+					<h4>Ivana</h4>				
+				</div>
+			</div>
+		</div>	
+		<div class="col-sm-4">
+			<div class="thumbnail"> 
+				<img class="img img-circle" src="img/customer3.png" width="125px" height="125px"></img>
+				<div class="caption">				
+					<p class="quote" translate>homepage.customer.testimonial3</p>
+					<h4>Bojan</h4>				
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="container">
+	<div class="section-title">
+		<h2 translate>homepage.professional.headline</h2>
+		<h4 translate>homepage.professional.subheadline</h4>
+	</div>
+	<section class="row features">
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-desktop text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.professional.benefit1</strong></h4>
+					<p translate>homepage.professional.feature1</p>					
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-building text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.professional.benefit2</strong></h4>
+					<p translate>homepage.professional.feature2</p>
+				</div>
+			</div>
+		</div>	
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-comment text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.professional.benefit3</strong></h4>
+					<p translate>homepage.professional.feature3</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6 col-md-3">
+			<div class="thumbnail"> 
+				<i class="fa fa-bullhorn text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.professional.benefit4</strong></h4>
+					<p translate>homepage.professional.feature4</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="text-center">
+		<h4 translate style="margin-bottom: 20px">homepage.professional.followup</h4>
+		<a ui-sref="za-majstore"><button class="btn btn-danger btn-lg" translate>homepage.professional.calltoaction</button></a>
+	</div>	
+</div>
+<div class="highlight">
+	<div class="container">
+		<div class="section-title">
+			<h2 translate>homepage.mission.headline</h2>
+			<h4 translate>homepage.mission.subheadline</h4>
+		</div>
+		<section class="row features">
+			<div class="col-sm-4">
+				<div class="thumbnail"> 
+					<img class="img" src="img/plan.jpg" width="400px" height="400px"></img>
+					<div class="caption">
+						<h4 translate>homepage.mission.plan</h4>									
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="thumbnail"> 
+					<img class="img" src="img/work.jpg" width="400px" height="400px"></img>
+					<div class="caption">
+						<h4 translate>homepage.mission.work</h4>									
+					</div>
+				</div>
+			</div>	
+			<div class="col-sm-4">
+				<div class="thumbnail"> 
+					<img class="img" src="img/bbq.jpg" width="400px" height="400px"></img>
+					<div class="caption">
+						<h4 translate>homepage.mission.bbq</h4>									
+					</div>
+				</div>
+			</div>
+		</section>	
+	</div>
+</div>
+<div class="container">
+	<div class="section-title">
+		<h2 translate>homepage.user.headline</h2>
+		<h4 translate>homepage.user.subheadline</h4>
+	</div>
+	<section class="row features">
+		<div class="col-sm-4">
+			<div class="thumbnail"> 
+				<i class="fa fa-facebook text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.user.benefit1</strong></h4>
+					<p translate>homepage.user.feature1</p>					
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="thumbnail"> 
+				<i class="fa fa-thumbs-up text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.user.benefit2</strong></h4>
+					<p translate>homepage.user.feature2</p>
+				</div>
+			</div>
+		</div>	
+		<div class="col-sm-4">
+			<div class="thumbnail"> 
+				<i class="fa fa-folder-open text-info fa-4x"></i>
+				<div class="caption">
+					<h4 class="text-danger"><strong translate>homepage.user.benefit3</strong></h4>
+					<p translate>homepage.user.feature3</p>
+				</div>
+			</div>
+		</div>
+	</section>	
+	<div class="text-center">
+		<button ng-click="openUserSignUp()" class="btn btn-danger btn-lg" translate>homepage.user.calltoaction</button>
+	</div>
+</div>
+<div class="container">
+	<div class="section-title">
+		<h2 translate>homepage.partnersheadline</h2>
+		<h4 translate>homepage.partnerssubheadline</h4>
+	</div>
+	<section class="row text-center">
+		<img class="img" src="img/obrtnicivg.jpg"></img>			
+	</section>	
+</div>
+<div class="contact">
+	<div class="container">
+		<div class="col-sm-5">
+			<h3 class="text-white" translate>global.form.address</h3>
+			<p>
+			Turopoljska 36,<br/>
+			10417 Buševec,<br/>			
+			Hrvatska
+			</p>
+		</div>		
+		<div class="col-sm-7">
+			<h3 class="text-white" translate>homepage.contact.headline</h3>
+			<br>
+			<form name="contactForm" role="form" ng-submit="sendMessage(contactForm.$valid)" form-autofill-fix novalidate> 
+			  <div class="form-group">
+			    <label translate>global.form.yourname</label>
+			    <input type="name" name="name" ng-model="contact.name" class="form-control">
+			  </div>
+			  <div class="form-group" show-errors>
+			    <label translate>global.form.email</label>
+			    <input type="email" name="email" ng-model="contact.email" class="form-control" ng-maxlength=255 required>
+			    <p ng-if="contactForm.email.$error.email || contactForm.email.$error.required" class="help-block">global.messages.error.validemail</p>
+          		<p ng-if="contactForm.email.$error.maxlength" class="help-block" translate>global.messages.error.emailtoolong</p>		          	     	
+			  </div>
+			  <div class="form-group">
+			  	<label translate>global.form.message</label>
+			  	<textarea ng-model="contact.text" class="form-control" name="message" rows="3"></textarea>
+			  </div>
+			  <br>
+			  <button type="submit" class="btn btn-large btn-success" translate>global.form.submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<h3 class="text-danger"><strong translate>salespage.disclaimer</strong></h3>			
+</div>
+	

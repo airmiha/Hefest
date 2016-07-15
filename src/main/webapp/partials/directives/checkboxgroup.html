@@ -1,0 +1,12 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div>
+     <button class="btn-link btn-small" ng-click="checkAll()"><span class="glyphicon glyphicon-ok"></span> Označi sve</button>
+     <button class="btn-link btn-small" ng-click="uncheckAll()"><span class="glyphicon glyphicon-remove"></span> Očisti sve</button>
+  	 <label ng-repeat="i in items" class="checkbox">
+          <input ng-model="i.checked" ng-change="setModelValue()"  type="checkbox"> {{i.label}}
+      </label>        
+</div>
+</html>

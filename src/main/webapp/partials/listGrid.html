@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div ng-controller="ListController">
+	<div ng-hide="detailsShown || loadingData">
+		<div class="list-sortControl">
+			<label class="filterTitle" translate>global.orderBy</label>
+			<div class="btn-group" dropdown style="width:100%">	
+			    <button type="button" class="btn btn-default dropdown-toggle button-sort">
+					<small> {{sortedBy.label | translate}}
+			       <span class="caret dropdown-caret"></span></small>
+			    </button>
+			    <ul class="dropdown-menu" role="menu" style="width:100%; min-width: 0px">
+			      <li ng-repeat="option in sortOptions">
+			      	<a ng-click="sortBy(option)"><small>{{option.label | translate}}</small></a>
+			      </li>
+			    </ul>
+			</div>	
+<!-- 			<dropdown-select options="sortOptions" selected="sortedBy" on-select="sortBy(option)" title="{{'global.orderBy' | translate}}"></dropdown-select> -->
+		 </div>
+		 <div class="list listContainer">
+			<ul class="list-group" style="margin-bottom:10px">
+				<li class="list-group-item" ng-repeat="professional in professionals">
+					<a ng-click="selectProfessional(professional)">
+						<img class="listImage" ng-src={{professional.leadimage}}> 
+						<div class="listInfo">
+							<span class="heading"><strong>{{professional.name}}</strong></span>
+							<span class="professions">{{professional.professions}}</span>
+							<span><img class="spanImage" src="img/project.png"><strong>{{professional.projectcount}}</strong> {{'professionals.projects' | translate}}</span>
+<!-- 							<span><rating class="rating" value="professional.avgReviewAsInt" max="5" readonly="true"></rating> -->
+<!-- 							<span class="text-warning"><i class="fa fa-comments-o"></i> {{professional.reviewcount}} {{'professionals.reviews' | translate}}</span> -->
+							<span class="text-success"><i class="fa fa-thumbs-o-up"></i> <strong>{{professional.endorsementcount}}</strong> {{'professionals.endorsements' | translate}}</span>
+						</div>						
+					 </a>
+					 <a ng-click="openScoreDetails()"><span class="badge listBadge"  tooltip-placement="bottom" tooltip="{{'professionals.hefestscore' | translate}}">{{professional.score}}</span></a>
+				</li>
+			</ul>
+			<hr>
+			<div>
+				<pagination ng-show="numPages > 1 && professionals.length>0" class="pagination-sm listPager" total-items="resultsTotal" items-per-page="params.limit" num-pages="numPages" ng-model="currentPage" class="pagination-sm" rotate="true" max-size="4" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination>
+			</div>
+		</div>
+	</div>
+	<div ng-show="detailsShown && !loadingData">
+		<div class="list-pagerControl text-center">
+			<a ng-click="detailsShown=false" class="text-muted"><i class="fa fa-mail-reply"></i> <span translate>search.backtolist</span></a>
+			<a style="float:left" ng-click="previous()" translate>search.previous</a>
+			<a style="float:right" ng-click="next()" translate>search.next</a>
+		</div>
+		<div ng-include src="'partials/professional/details.html'"></div>
+	</div>
+	<div ng-show="loadingData" class="loading loading-list">
+		<img src="img/ajax-loader.gif"/>
+		<span translate>search.fetchingdata</span>
+	</div>
+</div>
+</html>

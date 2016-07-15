@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div class="modal-header modal-header-background">
+	<h4 translate>global.account.joinHefest</h4>
+</div>
+<div class="modal-body">
+	<div class="alert alert-danger" ng-show="error">
+         <strong translate>global.messages.error.signupfailed</strong> {{'global.messages.error.checkdata' | translate }}
+    </div>
+    <div class="alert alert-danger" ng-show="errorUserExists">
+        <strong translate>global.messages.error.alreadyregistered</strong> {{'global.messages.error.trytosignin' | translate }}
+    </div>
+    <div class="alert alert-danger" ng-show="doNotMatch" translate>
+         global.messages.error.dontmatch
+    </div>
+	<form name="userSignupForm" ng-submit="signUp(userSignupForm.$valid)" form-autofill-fix novalidate>
+		<div class="form-group" show-errors ng-show="isProfessional">
+			<label>{{'global.form.companyname' | translate }} <span>(<em translate>global.form.mandatory</em>)</span></label>
+          	<input type="text" name="name" ng-model="newUser.name" class="form-control" ng-maxlength=99 required auto-focus>
+          	<p ng-if="userSignupForm.name.$error.required" class="help-block" translate>global.messages.validate.companyname.required</p>		
+			<p ng-if="userSignupForm.name.$error.maxlength" class="help-block" translate>global.messages.validate.companyname.maxlength</p>          	          	     
+		</div>
+		<div class="form-group" show-errors>
+			<label>E-mail <span>(<em translate>global.form.mandatory</em>)</span></label>
+          	<input type="email" name="email" ng-model="newUser.email" class="form-control" ng-maxlength=255 required>
+          	<p ng-if="userSignupForm.email.$error.email || userSignupForm.email.$error.required" class="help-block" translate>global.messages.error.validemail</p>
+          	<p ng-if="userSignupForm.email.$error.maxlength" class="help-block" translate>global.messages.error.emailtoolong</p>		          	     	
+		</div>
+		<div class="form-group" show-errors>
+			<label translate>global.form.password</label>
+          	<input type="password" name="password" ng-model="newUser.password" class="form-control" placeholder="{{'global.form.newpassword.placeholder' | translate}}" ng-maxlength=50 ng-minlength=6 required>
+          	<p ng-if="userSignupForm.password.$error.required" class="help-block" translate>global.messages.validate.password.required</p>
+          	<p ng-if="userSignupForm.password.$error.minlength" class="help-block" translate>global.messages.validate.password.minlength</p>
+          	<p ng-if="userSignupForm.password.$error.maxlength" class="help-block" translate>global.messages.validate.password.maxlength</p>		          	     	
+		</div>
+		<div class="form-group">
+			<label translate>global.form.confirmpassword</label>
+          	<input type="password" name="repeatPassword" ng-model="repeat.repeatPassword" class="form-control">		          	     	
+		</div>
+		<button type="submit" class="btn btn-success btn-lg" style="width:100%" translate>global.account.register</button>
+	</form>
+</div>
+<div class="modal-footer" style="text-align:center">
+	<span> {{'global.account.alreadyamember' | translate }} <a ng-click="openSignIn()" translate> global.account.signin</a></span>
+</div>
+</html>

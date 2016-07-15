@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="listDetails">
+	<a ui-sref="professional({professionalId: currentProfessional.professionalId, url: currentProfessional.pageUrl})" target="_blank"><h4 class="inline text-primary"><strong>{{currentProfessional.name}}</strong> </h4>  <i class="fa fa-external-link"></i></a>		
+	<a ng-click="openScoreDetails()"><span class="badge listBadge pull-right"  tooltip-placement="bottom" tooltip="{{'professionals.hefestscore' | translate}}">{{currentProfessional.score}}</span></a>
+	<h5>{{currentProfessional.profileHeadline}}</h5>
+	<div style="height: 250px">
+		<carousel interval=3000>
+	      <slide ng-repeat="image in currentProfessional.images" active="image.active">
+	        <img ng-src="img/mock/{{image.path}}" style="margin:auto;">
+	        <div class="carousel-caption">
+	          <h6 class="text-white">{{image.description}}</h6>
+	        </div>	     
+	      </slide>
+	    </carousel>
+    </div>
+    <div class="text-center well">
+    	<button class="btn btn-warning" ng-click="openRequestForProposal()" style="margin-top: 5px"><strong translate>professionals.requestoffer</strong></button>
+<!--     	<i class="fa fa-arrow-left text-danger" style="vertical-align:middle; margin-left:5px"></i> -->
+   </div>
+
+   <div class="media">
+	  <a class="pull-left" href="#">
+	    <img class="media-object" ng-src="img/{{currentProfessional.testimonials[0].imagePath}}" width="60px" alt="...">
+	  </a>
+	  <div class="media-body">
+	    <h6 class="media-heading"><strong>{{currentProfessional.testimonials[0].summary}}</strong></h6>
+	    <p style="margin-bottom: 5px"><small>{{currentProfessional.testimonials[0].text}}</small></p>
+	    <p class="text-muted small">
+			{{currentProfessional.testimonials[0].personName}}					
+		</p>
+	  </div>
+	</div>
+	<div class="text-center">
+	  	<a><i class="fa fa-comments-o"></i> <strong>{{currentProfessional.reviewCount}}</strong> <span translate>professionals.morereviews</span></a>
+	 </div>
+	 <hr style="margin:10px 0">
+	 <div class="text-center">
+	  	<a><span><img class="spanImage" src="img/project.png"><strong>{{currentProfessional.projectCount}}</strong> {{'professionals.projects' | translate}},  </span></a>
+	  	<a class="text-success"><i class="fa fa-thumbs-o-up"></i>  <span><strong>{{currentProfessional.endorsementCount}}</strong> {{'professionals.endorsements' | translate}}</span></a>
+	 </div>
+	<hr style="margin:10px 0">
+	<div>
+		<h5><strong translate>professionals.categories</strong></h5>	
+		 <ul>
+	        <li ng-repeat="(id, profession) in currentProfessional.professionsAndServices">
+	        	<h6>{{profession.name}}</h6>
+	        	<ul class="list-unstyled">
+	        		<li ng-repeat="serviceCategory in profession.serviceCategories"><i class="fa fa-check text-success"></i> <small>{{serviceCategory.name}}</small></li>
+	        	</ul>
+	        </li>
+        </ul> 	
+	</div>
+</div>
+</body>
+</html>

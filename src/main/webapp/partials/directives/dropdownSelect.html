@@ -1,0 +1,12 @@
+<label class="filterTitle">{{title}}</label>
+<div class="btn-group" dropdown style="width:100%">	
+    <button type="button" class="btn btn-default dropdown-toggle button-sort">
+    	 {{selected.label | translate}}
+       <span class="caret dropdown-caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" style="width:100%">
+      <li ng-repeat="option in options">
+      	<a ng-click="onSelect({option: option})">{{option.label | translate}}</a>
+      </li>
+    </ul>
+</div>

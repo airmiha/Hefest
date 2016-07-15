@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "baseName": "Hefest",
+    "packageName": "com.hefest.app",
+    "packageFolder": "com/hefest/app",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "7",
+    "enableTranslation": true,
+    "rememberMeKey": "f1f30c4d20d11c9b36b9a074708bc28167165bde"
+  }
+}

@@ -1,0 +1,28 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<div class="container-fluid profileArea">
+	<div class="row" style="padding-top: 10px">
+		<div class="col-sm-2 col-sm-offset-2">	
+			<div class="profileImage">
+				<img width="100%" height="100%" style="border-radius:10px" src="{{professional.leadImage}}"/>
+				<h4>{{professional.name}}</h4>
+<!-- 				<a href="#" translate>updateProfile.menu.seeprofile</a> -->
+			</div>
+			<div class="list-group profileMenu">  
+			   <a class="list-group-item" ui-sref="profil.slike" ng-class="{active:isActive('/profil/slike')}"><i class="glyphicon glyphicon-picture"></i> <span translate>updateProfile.menu.pictures</span></a>
+		       <a class="list-group-item" ui-sref="profil.podaci" ng-class="{active:isActive('/profil/podaci')}"> <i class="glyphicon glyphicon-edit"></i> <span translate>updateProfile.menu.details</span></a>		       
+		       <a class="list-group-item" ui-sref="profil.lozinka" ng-class="{active:isActive('/profil/lozinka')}">  <i class="glyphicon glyphicon-lock"></i> <span translate>updateProfile.menu.changepassword</span></a>
+		       <a class="list-group-item" ui-sref="profil.projekti" ng-class="{active:isActive('/profil/projekti')}"> <i class="glyphicon glyphicon-wrench"></i> <span translate>updateProfile.menu.pastwork</span></a>
+			</div>			
+		</div>
+		<div class="col-sm-6 profileSection">
+			<div class="alert alert-warning" ng-show="professional && !professional.active">
+        		<strong><span class="glyphicon glyphicon-warning-sign"> </span> <span translate>updateProfile.messages.emailNotActivated</span></strong>
+     		</div>
+     		<div ui-view></div>	
+		</div>
+	</div>
+</div>
+</html>

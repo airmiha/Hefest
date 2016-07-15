@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+	<body>
+		<h3 translate>profileImages.headline</h3>
+		<div class="alert alert-success" ng-show="success" scroll-bookmark>
+               <strong><i class="glyphicon glyphicon-ok-circle"></i> <span translate>updateProfile.messages.success</span></strong>
+            </div>
+         <div class="alert alert-danger" ng-show="error">
+               <strong><i class="glyphicon glyphicon-warning-sign"></i><span translate>updateProfile.messages.error</span></strong>
+         </div> 
+		<form name="updateProfessionalHeadlineForm" ng-submit="updateProfessionalProfile(updateProfessionalHeadlineForm.$valid)" novalidate>
+			<div class="form-group">
+				<label translate>profileImages.profileHeadline</label>
+			    <input type="text" class="form-control" ng-model="professional.profileheadline" placeholder="{{'updateProfile.form.headline.placeholder' | translate}}">		          	     
+			</div>
+			<div class="form-group">
+				<label translate>profileImages.profileSubHeadline</label>
+			    <input type="text" class="form-control" ng-model="professional.profilesubheadline" placeholder="{{'updateProfile.form.subheadline.placeholder' | translate}}">		          	     
+			</div>
+			<div class="form-group">
+				<label translate>profileImages.valuepropositions</label>
+				<p translate>profileImages.valuepropositions.explanation</p>
+				
+<!-- 				Unesite do tri karakteristike svog poduzeća koje klijentu daju najveću vrijednost. Primjer: "Besplatno savjetovanje naših stručnjaka."</p> -->
+			     <br>
+			     <input type="text" class="form-control" ng-model="professional.valueproposition1" placeholder="{{'updateProfile.form.valueproposition.placeholder1' | translate}}">
+			     <br>
+			     <input type="text" class="form-control" ng-model="professional.valueproposition2" placeholder="{{'updateProfile.form.valueproposition.placeholder2' | translate}}">
+			     <br>		          	
+			     <input type="text" class="form-control" ng-model="professional.valueproposition3" placeholder="{{'updateProfile.form.valueproposition.placeholder3' | translate}}">
+			</div>
+			<div class="form-group" style="text-align: right">
+				<button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-save" scroll-to-bookmark></i> <span translate>updateProfile.saveChanges</span></button>
+			</div>
+		</form>	
+	</body>
+</html>
